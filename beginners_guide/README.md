@@ -49,19 +49,13 @@ Before you pick factions, you should understand the campaign **game mode**, beca
 
 Antistasi supports:
 
-- **Reb vs Gov vs Inv** (three-way war)
-- **Reb vs Gov + Inv** (two enemies, but not fighting each other the same way)
-- **Reb vs Gov** (single enemy)
 
-Pick the mode you want at campaign start and leave it alone afterwards.
-
-### What the modes mean (quickly)
 
 - **Reb vs Gov**: simplest mode. One main enemy (“the government/occupants”). Good for learning, smaller groups, or “one clear front line”.
 - **Reb vs Gov + Inv**: two enemy factions exist. You’ll still mostly feel pressure from the government, but the invaders add extra chaos and extra threats depending on where they are on the map.
 - **Reb vs Gov vs Inv**: full three-way war. Expect the most unpredictability and “stuff happening without you”. Great for emergent fights, but it’s the least beginner-friendly.
 
-You pick:
+You should probably determine the mode you want on the param tab before picking factions. Once you've done that you can determine which faction(s) you face against and who you play as.
 
 - **Rebels** (you)
 - **Civilians**
@@ -88,16 +82,6 @@ Full reference:
 - **[Params tab reference](../reference/params-tab.md)**
 
 ---
-
-# Game modes
-
-Antistasi supports:
-
-- **Reb vs Gov vs Inv** (three-way war)
-- **Reb vs Gov + Inv** (two enemies, but not fighting each other the same way)
-- **Reb vs Gov** (single enemy)
-
-Pick the mode you want at campaign start and leave it alone afterwards.
 
 ---
 
