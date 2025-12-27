@@ -41,15 +41,7 @@ Things you can do here:
 
 ### Set HQ position
 
-HQ placement tips (and the “why”) are in a dedicated page:
-
-- **[Set HQ position (HQ placement)](../reference/set-hq-position.md)**
-
-What *this means for players*:
-
-- Don’t overthink “perfect HQ”. You can move later, but a good start helps.
-- Pick somewhere that’s **not obvious**, with **natural cover**, and **multiple exit routes**.
-- Avoid placing HQ right next to the “main roads everyone drives on” unless you like surprise drive-bys.
+See **[Set HQ position (HQ placement)](../reference/set-hq-position.md)**.
 
 ## Factions tab (who’s fighting)
 
