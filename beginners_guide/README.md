@@ -10,7 +10,13 @@ If you want to compare tone/structure, the older docs site is here:
 
 # Setup UI
 
-This is the campaign setup screen you use to **start a new campaign** or **load an old save**.
+This is the **first screen you see after loading into the scenario**.
+
+Before the campaign actually starts, you (or your host/admin) need to set up:
+
+- what save to load (or whether you’re starting fresh)
+- which factions are in the war
+- the campaign parameters (difficulty/limits/tuning)
 
 It has three main tabs:
 
@@ -35,11 +41,18 @@ Things you can do here:
 
 ### Set HQ position
 
-When you pick HQ start position on the map, the game will reject bad positions. In practice:
+When you pick HQ start position on the map, the game will show “danger zones” and reject bad positions.
+In practice:
 
-- You **can’t** place HQ **within 500m** of major markers/locations.
+- You **can’t** place HQ **within 500m** of major markers/locations (the map will show red hatched circles).
 - You **can’t** place HQ in water.
 - You **can’t** place HQ outside the map bounds.
+
+What *this means for players*:
+
+- Don’t overthink “perfect HQ”. You can move later, but a good start helps.
+- Pick somewhere that’s **not obvious**, with **natural cover**, and **multiple exit routes**.
+- Avoid placing HQ right next to the “main roads everyone drives on” unless you like surprise drive-bys.
 
 ## Factions tab (who’s fighting)
 
@@ -135,6 +148,30 @@ Pick missions that match your group size and patience.
 # Undercover and how to use it
 
 Undercover is great for scouting and getting into position before you start shooting. Assume it will eventually break; plan your exit.
+
+---
+
+# HQ placement (practical advice)
+
+This is the “where should we put it?” advice that actually saves you pain.
+
+## What makes a good HQ spot
+
+- **Cover**: trees, rocks, small hills. You want concealment from casual spotting.
+- **Space**: enough flat-ish ground to park vehicles and not block yourself in.
+- **Access**: close enough to roads to move supplies, but not *on* a road where AI/players constantly pass.
+- **Escape routes**: at least two directions to leave quickly when things go wrong.
+
+## What makes a bad HQ spot
+
+- **Too exposed**: big open fields with no cover.
+- **Too cramped**: deep forest with no room to park/build.
+- **Too “central” to trouble**: near a lot of enemy activity, where every small mistake turns into a base siege.
+
+## A simple rule of thumb
+
+If your HQ feels like “a place we can chill between ops”, you’re probably fine.
+If it feels like “we’re constantly fighting here”, it’s probably in a bad location.
 
 ---
 
