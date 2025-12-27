@@ -155,6 +155,17 @@ Undercover is great for scouting and getting into position before you start shoo
 
 This is the “where should we put it?” advice that actually saves you pain.
 
+Placing your HQ correctly is critical to the success of your resistance.
+
+You want your HQ to be both concealed and close enough to strategic zones for missions.
+
+## Strong practical rules (worth following)
+
+- **Always place your HQ on or near the end of a road.** You will want all of your vehicles to be on a road so you can go undercover. Going off road may get you spotted.
+- **Never place your HQ in between towns or other strategic zones.** The enemy sends patrols in between zones and may spot your HQ.
+- **Place your HQ inside a compound and put Petros inside a building** for added protection.
+- **Place your HQ within 4km of strategic zones so you can get missions.** Any area 4km or more from your HQ will not be available for missions (distance can be changed through parameters).
+
 ## What makes a good HQ spot
 
 - **Cover**: trees, rocks, small hills. You want concealment from casual spotting.
