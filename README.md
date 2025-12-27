@@ -1,25 +1,28 @@
-# Antistasi Guide (GitHub Edition)
+# Official Antistasi Community Edition Wiki
 
-This is a simple, GitHub-browsable guide to **playing Antistasi** (the scenario), written for casual players.
+Hello and welcome to the Antistasi Guide!
 
-- New here? Start with **[Getting Started](getting-started/README.md)**.
-- Want the “what does this marker do?” answers? Go to **[Map Locations](gameplay/map-locations/README.md)**.
-- Not commanding? You can ignore **[Commander](commander/README.md)** entirely.
+Antistasi is a persistent “capture the island” style campaign for Arma 3. You start out outgunned and under-resourced, and you grow your rebellion over time by looting, completing missions, and taking (and holding) key locations.
 
-## Where do I click?
+This repo is intentionally simple: **Markdown files you can browse directly in GitHub**.
 
-- **Battle Menu**: your main hub (war status, missions, admin/commander actions).
-- **Role Selection**: change role perks (rifleman/medic/engineer/TL/commander).
-- **HQ actions**: many actions require being near HQ (varies by feature).
+## Guides
 
-If you’re lost, see **[Controls & Menus](reference/controls-and-menus.md)**.
+We aim to keep the documentation in three “levels”:
 
-## Table of contents
+- **Beginners Guide** — how to play, what the systems mean, and what to do next.
+- **Detailed Reference Guide** — deeper mechanics and numbers (optional).
+- **Dev Guide** — developer/admin focused notes (optional).
 
-- **[Getting Started](getting-started/README.md)**
-- **[Core Gameplay](gameplay/README.md)**
-- **[Strategy (non‑Commander)](strategy/README.md)**
-- **[Commander (optional)](commander/README.md)**
-- **[Reference](reference/README.md)**
+Right now we’re starting with just one guide:
+
+- **[Beginners Guide](beginners_guide/README.md)**
+
+## Notes
+
+- This guide is a “living” rewrite inspired by the older docs site:
+  - [Antistasi Docs index](https://official-antistasi-community.github.io/A3-Antistasi-Docs/index.html)
+  - [Beginners Guide (raw)](https://official-antistasi-community.github.io/A3-Antistasi-Docs/beginners_guide/raw_beginners_guide.html#beginners-guide)
+
 
 
