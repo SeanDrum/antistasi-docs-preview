@@ -83,6 +83,10 @@ This tab is a big list of “server rules” / tuning options.
 
 Example: **Game Mode** is explicitly marked “Do NOT change this mid mission”.
 
+Full reference:
+
+- **[Params tab reference](../reference/params-tab.md)**
+
 ---
 
 # Game modes
