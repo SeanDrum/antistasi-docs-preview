@@ -5,7 +5,7 @@ This is the casual “how do I actually play this?” guide.
 
 ---
 
-# Setup UI
+# Setting up the scenario
 
 This is the **first screen you see after loading into the scenario**.
 
@@ -77,9 +77,11 @@ Full reference:
 
 ## Game Mechanics
 
+Before walking through a basic strategy on how to win in Antistasi, there are some basic elements of the game that must be first understood.
+
 ### Map markers
 
-This section is intentionally short. For Antistasi, the question is always: **“What does this marker mean for the campaign?”**
+These are capturable (and losable) points around the map. Each carries different benefits and different challenges to capture them.
 
 - **Towns / cities**: Towns are the “hearts and minds” layer, and they’re also **passive income**: every ~10 minutes the campaign adds **money (“resources”) and HR** based on that town’s population and rebel support. If you *control* the town you get the full value; if the enemy controls it you still get some, but reduced. High rebel support can flip the town to your side, and keeping support high makes the war easier over time.
 - **Outposts**: Outposts are military footholds and common frontline objectives. Capturing them removes an enemy garrison anchor in that area and gives you another defensible point you can garrison. Some outposts are also tied to nearby **radio towers**, which makes them extra valuable to hold.
@@ -95,6 +97,27 @@ This section is intentionally short. For Antistasi, the question is always: **�
 ### Info bar
 
 The info bar is a persistent display at the top of your screen showing key campaign metrics. It displays: **HR** (Human Resources for recruiting), your **personal money**, **aggression levels** for Occupants and Invaders (how much they're targeting you), **war tier** (campaign progression), faction names, and your **undercover status**. If you're the commander, it also shows faction **resources** (shared money) and available **bomb runs**. You can toggle it on/off with a keybind (default Ctrl+F12) or via the player menu. Check it regularly to track your progress and enemy threat levels.
+
+---
+
+### Player Roles & Abilities
+
+When you join the campaign, you select a **player role** that grants you specialized abilities and stat modifiers. Each role fills a different tactical niche, so coordinate with your team to cover all the bases.
+
+**Available roles:**
+
+- **Rifleman**: The balanced choice. Can **hack enemy UAVs** to turn them to your side.
+- **Team Leader**: Stealthy scout and logistics expert. **0.8x visibility/audibility** (harder to detect), **1.4x load capacity** (carries more), and can use the **builder system** to construct fortifications.
+- **Grenadier**: Heavy firepower specialist. **1.2x visibility** (easier to spot), but **0.8x fatigue from weight** (better stamina under load).
+- **Autorifleman**: Sustained fire support. **1.2x audibility** (louder), but **0.8x fatigue from weight** (better stamina under load).
+- **Medic**: Medical specialist. Can perform **advanced medical actions** like surgeries and PAK usage (if Advanced Medical is enabled in params).
+- **Engineer**: Technical expert and builder. Can **build fortifications**, **defuse mines**, **repair vehicles**, and is an **explosives specialist**. Also benefits from **0.9x visibility** (stealthier) and **1.4x load capacity** (better stamina).
+- **Commander**: Gets **all role benefits automatically** (except hacking UAVs, which requires Rifleman).
+
+**Tips:**
+- You can change roles at HQ via the **Player menu**
+- Teams benefit from having at least one Medic and one Engineer
+- Commanders have powerful strategic abilities—see the **[Commander functionality](../reference/commander-and-member-functionality.md)** guide for details
 
 ---
 
@@ -191,24 +214,78 @@ You lose the campaign if **more than one-third (33.33%) of the total civilian po
 - **Invader punishment attacks**: If the Invaders launch a punishment attack against one of your cities and you fail to defend it, they will destroy the city completely. This involves killing all civilians, mining the area, and marking the location as destroyed. The civilians are permanently counted towards the loss condition and the city cannot be rebuilt. Any benefits like HR or income will no longer occur from that location. You will be given a "Punishment" mission to warn you that this act is occuring, it is obviously really important you show up and defend towns targeted by punishment missions.
 - **Orbital strikes**: If an enemy orbital strike hits within 200 meters of a city, that city is immediately destroyed.
 
-
-
 ---
 
-## Missions
+## Campaign Walkthrough
 
-Mission types commonly include:
+This section provides a strategic roadmap for progressing through an Antistasi campaign from start to finish. The campaign naturally divides into three phases based on your capabilities and objectives.
 
-- Conquest
-- Destroy
-- Assassination
-- Convoy ambush
-- Rescue
-- Logistics
-- Support
+### Early Game: Building Your Arsenal
 
-Pick missions that match your group size and patience.
+**Primary goal**: Acquire basic combat gear (rifle, body armor, helmet) and unlock essential equipment. This phase typically takes 10-20 hours of gameplay.
 
---
+**What to focus on:**
 
+- **Kill patrols**: Hunt down enemy patrols scattered around towns. They're relatively weak and provide easy gear.
+- **Complete easy missions**: Prioritize "City Supplies" and "Kill the Traitor" missions. These have lower risk and good rewards.
+- **Tackle checkpoints**: Once you have basic weapons, attack small checkpoints. They often have useful 50cal mounted vehicles you can capture.
+- **Use all available resources**: Be creative with what you have. Improvise, adapt, overcome. Civilian vehicles, stolen enemy gear, and guerrilla tactics are your friends.
+- **Destroy radio towers**: Once you obtain placeable explosives (C4, satchel charges), prioritize destroying nearby enemy radio towers. **This is crucial**: When a radio tower is destroyed or rebel-controlled, your positive influence on nearby populations is **DOUBLED**. This makes it much easier to win hearts and minds and gain passive income from towns.
 
+**What NOT to do:**
+
+- Don't try to capture and hold strategic zones yet. You lack the gear, manpower, and resources to defend them.
+- Don't take on heavily defended positions or high-tier missions. Build up your capabilities first.
+- Don't ignore the radio towers. They significantly slow down your population support growth if left in enemy hands.
+
+### Mid Game: Taking Territory
+
+**Primary goal**: Capture your first strategic zones, establish defenses, and build toward taking an airbase.
+
+**What to focus on:**
+
+- **Capture your first outpost or resource site**: Choose one with a radio tower if possible. You'll need to garrison it with AI soldiers—the exact number depends on the site's size and whether it's on the frontline, but expect to need a significant force (the game calculates garrison requirements dynamically based on marker size and strategic importance).
+- **Defend against counterattacks**: Expect frequent enemy attacks depending on aggression levels. Successfully defending these attacks provides excellent gear-looting opportunities.
+- **Fortify captured zones**: Use the builder system (Engineer or Team Leader roles) to place static weapons, cover, and defensive positions. This lets you stay on offense later.
+- **Expand methodically**: Only attack new zones when you have the vehicles, HR (soldiers), and money to spare. Overextending will leave you vulnerable.
+- **Use roadblocks and outposts strategically**: These help solidify your control over an area. Note that fast travel works between airbases, outposts, and seaports (as long as there are no enemies within 500 meters).
+- **Capture enemy armor**: As you gain advanced AT (anti-tank) options, try to disable and capture enemy vehicles rather than destroying them. Turn their assets against them.
+- **Train your soldiers**: Spend excess money on garrison training. This makes your AI troops more comparable to the enemy's hardened infantry.
+- **Build your arsenal**: Continue collecting and unlocking weapons, vehicles, and equipment through missions and looting.
+
+**Preparing for an airbase assault:**
+
+You should only attempt to capture an airbase when you meet these conditions:
+
+- **War Tier 3 or higher**: You cannot capture airbases below War Tier 3 (the flag capture action won't work).
+- **Surplus of soldiers**: You need enough AI troops to both assault the base and garrison it afterward.
+- **AA (Anti-Air) assets**: Enemy air support can devastate your assault force.
+- **AT (Anti-Tank) assets**: Airbases have armored vehicle support.
+- **Armored vehicles** (if possible): Having your own armor helps, but isn't strictly required.
+
+**Important note**: Your first airbase assault doesn't have to succeed on the first try. It's often a war of attrition—launch multiple attacks, whittle down their defenses, and eventually break through.
+
+### Late Game: Total Victory
+
+**Primary goal**: Capture all airbases and achieve majority population support to win the campaign.
+
+**What to focus on:**
+
+- **Leverage your airbase**: Owning an airbase gives you passive income of airstrike points over time, plus access to air assets. You're now transitioning from a guerrilla resistance to a proper army.
+- **Use airstrikes liberally**: You have bomb runs available—use them to soften up targets before assaults.
+- **Deploy armor carefully**: Enemy AT weapons remain accurate and deadly. Always eliminate AT threats first, then focus on enemy armor.
+- **Take advantage of the "collapse"**: As you capture more territory from the Occupants, the Invaders will also expand, creating a power vacuum. The Occupants may run out of vehicles and become unable to effectively counterattack. This is your chance to rapidly capture their remaining territory—it's essentially free real estate.
+- **Defend every punishment mission**: Once the Occupants collapse, it's you versus the Invaders. The Invaders are ruthless with the civilian population. If they succeed in punishment attacks, they will **destroy entire cities**, killing all civilians in them. If more than one-third (33.33%) of the map's total population is killed, **you lose the game**. Punishment missions are your highest priority.
+- **Expect massive attacks**: The Invaders have access to their full arsenal, including multiple jets, heavy armor, and advanced support calls. Prepare accordingly.
+- **Continue hearts-and-minds efforts**: You need over 50% of the population supporting you (in addition to all airbases) to win. Keep working on city support through missions, killing enemies in cities, and controlling radio towers.
+- **Stay persistent**: Late game is often a slog. You will die. You will fail attacks. The path to victory in Antistasi is persistence—keep trying, whittle down the enemy, and maintain pressure.
+
+**Final victory requirements (both must be met):**
+
+1. **Control ALL airbases** on the map
+2. **More than 50% population support**:
+   - Cities you **control**: Full population × support percentage counts toward your total
+   - Cities you **don't control**: Only 50% of population × support percentage counts toward your total
+   - Your "rebel-supported population" total must exceed 50% of the map's total population
+
+**Remember**: This is a marathon, not a sprint. Antistasi is designed to be a long-term campaign. Stay focused, adapt to setbacks, and keep pushing forward. Good luck, Commander!
