@@ -132,12 +132,15 @@ These are capturable (and losable) points around the map. Each carries different
 
 Full reference:  **[Map Markers Reference](reference/map-markers.md)**.
 
+[↑ Top](#official-antistasi-community-edition-wiki)
 
 ---
 
 ### Info bar
 
 The info bar is a persistent display at the top of your screen showing key campaign metrics. It displays: **HR** (Human Resources for recruiting), your **personal money**, **aggression levels** for Occupants and Invaders (how much they're targeting you), **war tier** (campaign progression), faction names, and your **undercover status**. If you're the commander, it also shows faction **resources** (shared money) and available **bomb runs**. You can toggle it on/off with a keybind (default Ctrl+F12) or via the player menu. Check it regularly to track your progress and enemy threat levels.
+
+[↑ Top](#official-antistasi-community-edition-wiki)
 
 ---
 
@@ -160,6 +163,8 @@ When you join the campaign, you select a **player role** that grants you special
 - Teams benefit from having at least one Medic and one Engineer
 - Commanders have powerful strategic abilities—see the **[Commander functionality](reference/commander-and-member-functionality.md)** guide for details
 
+[↑ Top](#official-antistasi-community-edition-wiki)
+
 ---
 
 ### Your Headquarters (HQ)
@@ -175,6 +180,8 @@ At HQ, you can:
 - **Request missions** (from Petros): If you're a member, ask for new mission assignments. Petros will offer various mission types based on current campaign needs and your war tier.
 
 Full reference: **[Your Headquarters](reference/your-headquarters.md)**.
+
+[↑ Top](#official-antistasi-community-edition-wiki)
 
 ---
 
@@ -210,6 +217,8 @@ Each mission has success and failure conditions with different rewards and penal
 
 Full reference: **[Missions Reference](reference/missions.md)**.
 
+[↑ Top](#official-antistasi-community-edition-wiki)
+
 ---
 
 ### Arsenal
@@ -231,6 +240,8 @@ The **Arsenal** is your primary equipment management system, accessed at the veh
 
 The arsenal is central to progression: collect enemy equipment, build up your inventory, and unlock better gear as your stockpiles grow. Loot everything you can and bring it back to HQ to expand your available equipment.
 
+[↑ Top](#official-antistasi-community-edition-wiki)
+
 ---
 
 ### Commander and member functionality (advanced)
@@ -238,6 +249,8 @@ The arsenal is central to progression: collect enemy equipment, build up your in
 This is a large separate part of the game and requires a lot of detail that would expand the scope of this guide too much. Thus, it is **not covered in here**.
 
 Full reference:  **[Commander Guide](reference/commander-guide.md)** - Complete guide to Commander-only features and abilities
+
+[↑ Top](#official-antistasi-community-edition-wiki)
 
 ---
 ### Undercover
@@ -259,6 +272,8 @@ Undercover lets you move through enemy territory disguised as a civilian. Access
 - **Being spotted** by enemies
 
 When undercover breaks, you're marked as compromised for **30 minutes** and can't go undercover again during that time. Your AI squadmates automatically disguise themselves when you go undercover if you're the group leader. Treat undercover as temporary—always have an escape plan ready.
+
+[↑ Top](#official-antistasi-community-edition-wiki)
 
 ---
 
@@ -316,6 +331,8 @@ This section provides a strategic roadmap for progressing through an Antistasi c
 - Don't take on heavily defended positions or high-tier missions. Build up your capabilities first.
 - Don't ignore the radio towers. They significantly slow down your population support growth if left in enemy hands.
 
+[↑ Top](#official-antistasi-community-edition-wiki)
+
 ### Mid Game: Taking Territory
 
 **Primary goal**: Capture your first strategic zones, establish defenses, and build toward taking an airbase.
@@ -343,6 +360,8 @@ You should only attempt to capture an airbase when you meet these conditions:
 
 **Important note**: Your first airbase assault doesn't have to succeed on the first try. It's often a war of attrition—launch multiple attacks, whittle down their defenses, and eventually break through.
 
+[↑ Top](#official-antistasi-community-edition-wiki)
+
 ### Late Game: Total Victory
 
 **Primary goal**: Capture all airbases and achieve majority population support to win the campaign.
@@ -368,6 +387,8 @@ You should only attempt to capture an airbase when you meet these conditions:
 
 **Remember**: This is a marathon, not a sprint. Antistasi is designed to be a long-term campaign. Stay focused, adapt to setbacks, and keep pushing forward.
 
+[↑ Top](#official-antistasi-community-edition-wiki)
+
 ---
 
 ## Taking a strategic point
@@ -386,6 +407,8 @@ Taking a strategic point in the early game is no easy challenge. The enemy's veh
 
 - **Garrison size recommendation**: Bring at least double the men the resource has. If they have 20, bring 40. Even if your soldiers have body armour, helmets and rifles, they will not have AT launchers, LMGs, or other rare equipment and their training will definitely be inferior to the enemy. That is why bringing double is recommended.
 
+[↑ Top](#official-antistasi-community-edition-wiki)
+
 ### Scouting your target
 
 Before attacking, you should:
@@ -395,6 +418,8 @@ Before attacking, you should:
 - Scout the point you will attack and plan ahead.
 
 - Find out how many enemies there are and what their equipment looks like.
+
+[↑ Top](#official-antistasi-community-edition-wiki)
 
 ### Taking the point
 
@@ -406,6 +431,8 @@ Once you've scouted the target and have your forces ready with AA and AT assets,
 
 - **Holding the point**: Once you flip the point by interacting with the flag, you **MUST hold it**. The enemy may send counterattacks depending on the location and their available resources, though these are no longer automatic. If you successfully defend the point, it's yours. However, if the enemy manages to retake the point during a counterattack and you recapture it, you may face additional attacks. That is often enough to overpower you and force a retreat.
 
+[↑ Top](#official-antistasi-community-edition-wiki)
+
 ### After you take the point
 
 Once you've successfully captured the point:
@@ -415,6 +442,8 @@ Once you've successfully captured the point:
 - **Late game fortification**: In the later stages of the game, consider placing ZU anti-air guns in every other zone. That is expensive though.
 
 - **Stay vigilant**: The enemy **WILL** attempt to take this point again, make sure you are there to keep that point.
+
+[↑ Top](#official-antistasi-community-edition-wiki)
 
 ---
 
