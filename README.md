@@ -233,7 +233,7 @@ The arsenal is central to progression: collect enemy equipment, build up your in
 
 This is a large separate part of the game and requires a lot of detail that would expand the scope of this guide too much. Thus, it is **not covered in here**.
 
-Full reference:  **[Commander and member functionality](reference/commander-and-member-functionality.md)**
+Full reference:  **[Commander Guide](reference/commander-guide.md)** - Complete guide to Commander-only features and abilities
 
 ---
 ### Undercover
@@ -420,3 +420,6 @@ For detailed information about core game mechanics and systems, see the followin
 - [War Tier](reference/war-tier.md) - Complete guide to war tier calculation, progression thresholds, and how it affects enemy equipment and support availability
 - [Intel & Intelligence Gathering](reference/intel-intelligence-gathering.md) - Complete guide to the four intel types (Small, Medium, Large, Encrypted), how to find them, their rewards, and how radio towers enhance intel gathering
 - [Enemy Reactions & Counter-Attacks](reference/enemy-reactions-counter-attacks.md) - Detailed explanation of Quick Reaction Forces (QRF), enemy support calls (artillery, mortars, airstrikes, CAS, etc.), major attacks, and how enemies respond to your actions
+- [Roadblocks & Checkpoints](reference/roadblocks-checkpoints.md) - Explanation of how enemy factions dynamically spawn roadblocks and camps on roads, how they detect undercover players, and how destroying them affects local reputation
+- [Builder/Fortification System](reference/builder-fortification-system.md) - Complete guide to the builder system for Team Leaders and Engineers, including how to place fortifications, construction mechanics, build times, and available structures
+- [Player Rank System](reference/player-rank-system.md) - Overview of how players earn ranks through score points, rank progression requirements, and how rank affects commander election priority
