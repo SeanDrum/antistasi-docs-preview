@@ -35,6 +35,7 @@ This guide is written exclusively for Antistasi Community Edition and is largely
   - [Scouting your target](#scouting-your-target)
   - [Taking the point](#taking-the-point)
   - [After you take the point](#after-you-take-the-point)
+- [Additional Reference Information](#additional-reference-information)
 
 ---
 
