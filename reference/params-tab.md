@@ -1,317 +1,308 @@
 ## Params tab reference (behavior-first)
 
-This page is the “what it actually changes in code” reference for the Setup UI **Params** tab.
+This page describes what each parameter in the Setup UI **Params** tab does and when you might want to change it.
 
-- **Key names**: we use the internal parameter key in backticks (eg `allowUnfairSupports`) so you can talk about the same thing even if UI text changes.
-- **Scope**: most params are effectively **server rules** (published by the server on game start) even if the UI renders them client-side.
-- **Mid-campaign changes**: some params are safe-ish, some will produce weirdness if changed after a save is already running. When in doubt, treat all of these as “set at campaign start”.
+- **Key names**: we use the internal parameter key in backticks (eg `allowUnfairSupports`) so you can reference the same setting even if UI text changes.
+- **Scope**: most params are effectively **server rules** that are set when the game starts, even if the UI allows you to view them client-side.
+- **Mid-campaign changes**: some params are safe to change mid-campaign, but many will produce unexpected behavior if changed after a save is already running. When in doubt, treat all of these as "set at campaign start".
 
 ## Core / starting conditions
 
 - **Game mode** (`gameMode`)
-  - **What it does**: changes which “enemy” sides exist and whether Occupants/Invaders are friendly to each other.
-  - **Who uses it**: server init applies `setFriend` relationships and hides carrier markers for the missing side in some modes.
+  - **What it does**: changes which "enemy" sides exist and whether Occupants/Invaders are friendly to each other.
+  - **When to change**: set at campaign start; determines fundamental enemy structure.
   - **Gotchas**: changing mid-campaign can desync assumptions baked into saved state (factions, markers, resources).
 
 - **Auto save** (`autoSave`)
-  - **What it does**: gates the autosave loop (the server checks this every interval).
-  - **Who uses it**: server-only autosave loop in `initServer` triggers `A3A_fnc_saveLoop`.
+  - **What it does**: enables or disables automatic periodic saves of campaign progress.
+  - **When to change**: set at campaign start; can be toggled if you prefer manual-only saves.
   - **Gotchas**: autosave only happens if there have been players online since the last save (prevents empty-server spam).
 
 - **Auto save interval** (`autoSaveInterval`)
-  - **What it does**: sets the interval for the autosave scheduler and also pushes out the next autosave when you do a manual save.
-  - **Who uses it**: server autosave loop + `A3A_fnc_saveLoop` sets `autoSaveTime = time + autoSaveInterval` so you don’t immediately autosave after a manual save.
+  - **What it does**: sets how frequently automatic saves occur (in minutes). Manual saves reset the timer to prevent immediate duplicate autosaves.
+  - **When to change**: adjust based on how often you want automatic backups; longer intervals reduce save operations but increase risk of losing progress.
 
 - **Initial player money** (`initialPlayerMoney`)
-  - **What it does**: seed money for personal saves / first join.
-  - **Who uses it**: player save/load logic (personal economy), not the shared pool.
+  - **What it does**: starting personal money for each player when they first join the campaign.
+  - **When to change**: increase for easier starts where players can immediately buy equipment; decrease for more challenging early-game economy.
 
 - **Initial faction money** (`initialFactionMoney`)
-  - **What it does**: sets the starting rebel shared money pool (`resourcesFIA`).
-  - **Who uses it**: server sets `server setVariable ["resourcesFIA", initialFactionMoney, true]` during init.
+  - **What it does**: starting shared money pool for the rebel faction (used by commander for purchases, recruiting, etc.).
+  - **When to change**: higher values give commanders more starting options; lower values create tighter early-game resource management.
 
 - **Initial HR** (`initialHr`)
-  - **What it does**: sets starting HR (`hr`).
-  - **Who uses it**: server sets `server setVariable ["hr", initialHr, true]` during init.
+  - **What it does**: starting Human Resources (HR) value, which determines how many AI units can be recruited.
+  - **When to change**: higher values allow immediate recruitment of larger forces; lower values require building HR through missions before significant recruitment.
 
 ## Map / missions / pacing
 
 - **Player markers enabled** (`playerMarkersEnabled`)
-  - **What it does**: enables the player-markers loop.
-  - **Who uses it**: clients spawn `A3A_fnc_playerMarkers` during `initClient` when in multiplayer.
-  - **Gotchas**: only applies in MP; SP doesn’t run the player marker system.
+  - **What it does**: shows player position markers on the map for all friendly players.
+  - **When to change**: disable for more realism/hardcore play; enable for easier coordination in multiplayer.
+  - **Gotchas**: only applies in multiplayer; single-player doesn't use the player marker system.
 
 - **Limited fast travel** (`limitedFT`)
-  - **What it does**: blocks fast travel entirely or restricts destinations.
-  - **Who uses it**: fast-travel gating checks.
+  - **What it does**: controls fast travel availability.
   - **Behavior**:
-    - `limitedFT == 2`: disables fast travel (except some HC-related flows).
-    - `limitedFT == 1`: allows fast travel only to **HQ** and **captured airports**.
-  - **Gotchas**: fast travel can also be blocked by combat/enemy proximity (`enemyNearDistance`), active attacks, towing, FF punishment, and membership leash.
+    - `2`: disables fast travel entirely (except some special cases like HC movements).
+    - `1`: allows fast travel only to **HQ** and **captured airports**.
+    - `0`: allows fast travel to any valid destination.
+  - **When to change**: increase restrictions for more realistic movement and strategic positioning; decrease for quality-of-life convenience.
+  - **Gotchas**: fast travel can also be blocked by combat/enemy proximity, active attacks, towing vehicles, friendly-fire punishment, and membership leash restrictions.
 
 - **Mission distance** (`distanceMission`)
-  - **What it does**: hard radius from HQ marker for mission selection/generation.
-  - **Who uses it**: mission request system filters candidate markers/objects by `distanceMission`.
-  - **Gotchas**: impacts which missions can roll at all (especially on large terrains).
+  - **What it does**: maximum distance from HQ where missions can spawn or be selected.
+  - **When to change**: increase on large maps to allow missions further from HQ; decrease to keep action focused near your base.
+  - **Gotchas**: missions beyond this radius won't be available at all, which can significantly limit options on very large terrains.
 
 - **Spawn distance** (`distanceSPWN`)
-  - **What it does**: base radius used by the spawn/despawn ecosystem and a few other systems.
-  - **Who uses it**: server derives `distanceSPWN1` and `distanceSPWN2` from it; HQ placement also uses it for side-flipping nearby road controls after placement.
-  - **Gotchas**: very low values can look “poppy” (vehicles spawning on approach); very high values cost performance.
+  - **What it does**: base radius that determines when units and vehicles spawn/despawn around players, and affects initial HQ placement behavior.
+  - **When to change**: increase for better visual continuity (things spawn further away); decrease to improve performance on slower servers.
+  - **Gotchas**: very low values can look "poppy" (vehicles spawning right in front of you); very high values cost performance and may cause issues on lower-end hardware.
 
 - **Enemy near distance** (`enemyNearDistance`)
-  - **What it does**: the radius for “is there combat close enough to block an action?”
-  - **Who uses it**: `A3A_fnc_enemyNearCheck` checks Occupants+Invaders units in COMBAT that can fight.
-  - **Common blocks**: fast travel, buying/recruiting, builder, some HQ interactions.
-  - **Gotchas**: it checks *behavior == COMBAT*, not just “enemy exists”.
+  - **What it does**: radius that determines if nearby enemies are close enough to block certain actions (like fast travel, recruiting, building, HQ interactions).
+  - **When to change**: increase to prevent actions during combat more easily; decrease to allow more actions even when enemies are somewhat nearby.
+  - **Gotchas**: only checks for enemies in active combat state, not just any enemy presence, so you might see enemies but still be able to use actions if they haven't engaged.
 
 ## Civilians / world activity
 
 - **Civilian traffic** (`civTraffic`)
-  - **What it does**: scales spawned *parked* city vehicles/boats.
-  - **Who uses it**: city spawn place stats compute parked vehicles as roughly `sqrt(pop) * civTraffic` (see garrison/city vehicle generation).
-  - **Gotchas**: this is about city vehicles (cars/boats) as well as civ “activity” in other systems; higher values means more ambient vehicles to manage/clean up.
+  - **What it does**: controls how many parked civilian vehicles spawn in cities (scaled by city population).
+  - **When to change**: increase for more immersive world activity; decrease to reduce clutter and potential performance impact.
+  - **Gotchas**: affects parked vehicles in cities, not moving traffic; higher values mean more vehicles scattered around that may need cleanup.
 
 - **Global civilian max** (`globalCivilianMax`)
-  - **What it does**: global cap used by the civ spawning systems.
-  - **Who uses it**: server/client civ spawning logic (plus UI shows it in “game options” hint).
-  - **Gotchas**: `0` is effectively “no civs” in many spawners; on busy servers, low values reduce ambience but help perf.
+  - **What it does**: maximum total number of civilians that can exist in the world at once.
+  - **When to change**: increase for more populated, immersive worlds; decrease to improve performance on busy servers or lower-end machines.
+  - **Gotchas**: setting to `0` effectively disables civilian spawning; low values reduce world ambience but help with server performance.
 
 - **Max civilians per town** (`maxCiviliansPerTown`)
-  - **What it does**: per-town cap used by civ spawners.
-  - **Who uses it**: town/city spawn logic.
+  - **What it does**: maximum number of civilians that can spawn in any single town or city.
+  - **When to change**: increase for more populated settlements; decrease to limit civilian presence and improve performance in urban areas.
 
 ## Performance / cleanup
 
 - **Idle timeout** (`A3A_idleTimeout`)
-  - **What it does**: marks players as AFK after no movement/rotation for the configured time.
-  - **Who uses it**: client idle checker sets `player setVariable ["isAFK", true, ...]` when exceeded.
-  - **Gotchas**: this mainly feeds server-side behavior and stats; it does *not* kick players. Commander gets a warning hint.
+  - **What it does**: time (in seconds) before a player is marked as AFK when they haven't moved or rotated their view.
+  - **When to change**: adjust based on how quickly you want to identify inactive players; shorter times catch AFK faster, longer times are more forgiving.
+  - **Gotchas**: this marks players but doesn't automatically kick them; the commander will receive a warning notification about AFK players.
 
 - **GC max objects** (`A3A_gcMaxObjects`)
-  - **What it does**: hard cap for the postmortem cleanup queue; if the queue is too big, objects are deleted immediately even if near players.
-  - **Who uses it**: postmortem cleanup loop deletes regardless of expiry once over cap.
-  - **Gotchas**: this interacts with loot systems that mark containers as “don’t GC” (`stopPostmortem`).
+  - **What it does**: maximum number of objects allowed in the cleanup queue before forced deletion (even if near players).
+  - **When to change**: increase if you notice important items being cleaned up too aggressively; decrease if you're experiencing performance issues from too many objects piling up.
+  - **Gotchas**: some loot containers are protected from cleanup, but when the queue exceeds this limit, protections may be bypassed to prevent performance degradation.
 
 - **GC threshold** (`A3A_GCThreshold`)
-  - **What it does**: server-side timer for forced garbage collection.
-  - **Who uses it**: garbage cleaner tracker reminds players and runs GC when time since last GC exceeds threshold.
-  - **Special value**: `0` disables the forced GC tracker.
+  - **What it does**: time interval (in seconds) before the server forces a garbage collection cycle to clean up memory.
+  - **When to change**: increase if GC warnings are too frequent; decrease if you want more aggressive memory management. Set to `0` to disable automatic GC entirely.
+  - **Special value**: `0` disables the forced GC tracker and automatic cleanup reminders.
 
 ## Revive / medical
 
 - **Revive time** (`A3A_reviveTime`)
-  - **What it does**: affects the time required for revive actions.
-  - **Who uses it**: revive action logic.
+  - **What it does**: time (in seconds) required to revive a downed teammate.
+  - **When to change**: increase for more punishing/tactical gameplay where revives are risky; decrease for faster-paced action.
 
 - **Self revive method** (`A3A_selfReviveMethods`)
-  - **What it does**: enables the self-revive action while incapacitated.
-  - **Who uses it**: unconscious UI/action wiring checks this before allowing `A3A_fnc_selfRevive`.
-  - **Gotchas**: this is independent of ACE medical; if ACE medical replaces the revive pipeline, behavior may differ.
+  - **What it does**: enables players to revive themselves when incapacitated.
+  - **When to change**: enable for quality-of-life when playing alone or with uncoordinated teams; disable for more realistic cooperative gameplay requiring teammate assistance.
+  - **Gotchas**: this is independent of ACE medical; if ACE medical is enabled, it may override or interact differently with this setting.
 
 - **ACE food** (`aceFood`)
-  - **What it does**: adds ACE food items to the initial rebel equipment pool (when ACE is present).
-  - **Who uses it**: ACE compatibility init appends `aceFoodItems` into `initialRebelEquipment` when enabled.
-  - **Gotchas**: this does not “force-enable ACE hunger”; it only changes what items the campaign starts with.
+  - **What it does**: includes ACE food items in the starting rebel equipment pool when ACE mod is loaded.
+  - **When to change**: enable if you're using ACE and want food items available from the start; disable if you prefer to acquire them through gameplay.
+  - **Gotchas**: this only adds items to starting equipment; it doesn't enable ACE's hunger/thirst systems (those are controlled by ACE mod settings).
 
 ## Building / quality-of-life
 
 - **Builder permissions** (`A3A_builderPermissions`)
-  - **What it does**: gates who can start the building placer.
-  - **Who uses it**: builder start checks:
-    - **Team leader** eligibility when set to TL/both.
-    - **Engineer** eligibility when set to engineer/both.
-    - **Commander** (boss) is always eligible.
-  - **Gotchas**: also blocked by `enemyNearDistance`.
+  - **What it does**: controls which roles can access the building placement system.
+  - **Options**: team leaders, engineers, both, or commander-only (commander always has access regardless of setting).
+  - **When to change**: restrict to specific roles for organized building; open to more roles for flexibility.
+  - **Gotchas**: building is also blocked when enemies are nearby (controlled by enemy near distance).
 
 - **Remove / restore** (`A3A_removeRestore`)
-  - **What it does**: disables the “restore units” action on the vehicle box when enabled.
-  - **Who uses it**: client-side addAction condition includes `!A3A_removeRestore`.
+  - **What it does**: disables the "restore units" action on the vehicle box (which allows recovering stored vehicles/equipment).
+  - **When to change**: disable if you want permanent vehicle/equipment loss when items are removed; enable for quality-of-life recovery options.
 
 - **Helmet loss chance** (`helmetLossChance`)
-  - **What it does**: when a unit takes lethal head damage (`hithead`), there’s a % chance to remove headgear.
-  - **Who uses it**: damage handler for rebels / PvPers.
-  - **Gotchas**: this is specifically tied to the hitpoint `"hithead"` and “damage >= 1”, not general knockdowns.
+  - **What it does**: percentage chance that headgear is removed when a unit takes lethal head damage.
+  - **When to change**: increase for more realistic combat where headshots often remove helmets; decrease or set to 0 to prevent helmet loss.
+  - **Gotchas**: only triggers on actual lethal head damage, not just any knockdown or head injury.
 
 ## Garage / access
 
 - **Flag garage block** (`A3A_flagGarageBlock`)
-  - **What it does**: locks the flag’s **garage / buy vehicle / recruit** menus for N minutes after a flag flip.
-  - **Who uses it**: `manageFlagAccess` checks `serverTime - A3A_flagFlipTime` against `A3A_flagGarageBlock * 60`.
-  - **Gotchas**: the lock is per-flag and uses serverTime (so JIP clients see the same remaining time).
+  - **What it does**: locks the flag's garage, vehicle purchase, and recruitment menus for a set number of minutes after capturing a flag.
+  - **When to change**: increase to prevent immediate exploitation after captures (realism/balance); decrease for faster access to resources.
+  - **Gotchas**: the lock timer is per-flag and synchronized across all clients, so players joining mid-game will see the correct remaining time.
 
 ## Membership / moderation
 
 - **Membership enabled** (`membershipEnabled`)
-  - **What it does**: turns on the member/guest system.
-  - **Who uses it**:
-    - Guests can be blocked from using some actions (eg fast travel) if they’re outside the leash zone.
-    - Guests can be forcibly teleported back to HQ if they roam too far (see `memberDistance`).
-  - **Gotchas**: if disabled, membership checks mostly treat everyone as allowed.
+  - **What it does**: enables the member/guest system, which allows server admins to distinguish between trusted members and temporary guests.
+  - **When to change**: enable for servers that want to restrict certain actions to trusted players; disable for open servers where everyone has equal privileges.
+  - **Effects**: when enabled, guests may be restricted from fast travel outside the leash zone and can be teleported back to HQ if they roam too far (controlled by member distance).
+  - **Gotchas**: if disabled, all players are treated as having full member privileges.
 
 - **Guest commander** (`A3A_guestCommander`)
-  - **What it does**: controls whether non-members can become commander.
-  - **Who uses it**: commander assignment / eligibility logic.
+  - **What it does**: allows or prevents guests (non-members) from becoming commander.
+  - **When to change**: disable to restrict commander role to trusted members only; enable to allow any player to become commander.
 
 - **TK punish** (`tkPunish`)
-  - **What it does**: enables the friendly-fire punishment system and also gates some “danger close” behaviors.
-  - **Who uses it**:
-    - FF punishment EHs are not installed if `tkPunish == 0`.
-    - Some actions (including fast travel) check whether you’re currently jailed/punished.
-    - Rebel bomb-run UI blocks “danger close to HQ” when `tkPunish > 0`.
+  - **What it does**: enables friendly-fire punishment system and affects certain safety restrictions.
   - **Modes**:
-    - `0`: off
-    - `1`: on
-    - `2`: log/notify-only (still installs parts of the system)
+    - `0`: disabled (no punishment)
+    - `1`: enabled (full punishment system active)
+    - `2`: logging/notification only (tracks TKs but doesn't punish)
+  - **When to change**: enable to discourage accidental or intentional friendly fire; disable for relaxed gameplay or when using external admin tools.
+  - **Effects**: when enabled, players who teamkill are temporarily jailed and blocked from certain actions (like fast travel); bomb runs near HQ are also restricted for safety.
 
 - **Member slots** (`memberSlots`)
-  - **What it does**: reserves a % of rebel slots for members.
-  - **Who uses it**: server computes `bookedSlots = floor((memberSlots/100) * playableSlotsNumber teamPlayer)`; clients enforce it on join (guests can be kicked/ended when too many non-members).
-  - **Gotchas**: this is enforced client-side during init; server owners should also manage via server rules for best results.
+  - **What it does**: reserves a percentage of rebel team slots for members, preventing guests from filling all available slots.
+  - **When to change**: increase to guarantee slots for trusted members on busy servers; decrease to allow more guests to play.
+  - **Gotchas**: guests may be kicked when member slots are filled and more members try to join; server admins should coordinate with server rules for best enforcement.
 
 - **Member distance** (`memberDistance`)
-  - **What it does**: leash distance (meters) that guests must stay within of HQ (or members).
-  - **Who uses it**: guest leash loop warns with a countdown then teleports guests back to HQ when exceeded.
-  - **Special value**: `-1` (or `<= 0`) means unlimited / disabled.
-  - **Gotchas**: there are exemptions (boss, some aircraft states, FF punishment state).
+  - **What it does**: maximum distance (in meters) that guests can travel from HQ or nearby members before being teleported back.
+  - **When to change**: decrease to keep guests close to HQ for supervision; increase to give guests more freedom; set to `-1` or `0` to disable the leash entirely.
+  - **Special value**: `-1` or `0` disables the distance restriction completely.
+  - **Gotchas**: commander, certain aircraft states, and players under friendly-fire punishment are exempt from the leash restriction.
 
 ## Balance / difficulty (AI + scaling)
 
 - **Enemy balance multiplier** (`A3A_enemyBalanceMul`)
-  - **What it does**: scales core enemy “balance” values used in multiple systems (resources, weights, etc.).
-  - **Who uses it**: several balance computations; also displayed in the in-game “game options” hint.
+  - **What it does**: scales overall enemy strength across multiple systems (resources, attack frequency, unit quality, etc.).
+  - **When to change**: increase for harder campaigns with more aggressive and resourceful enemies; decrease for easier gameplay.
 
 - **Enemy attack multiplier** (`A3A_enemyAttackMul`)
-  - **What it does**: scales how quickly enemy attack resources accumulate / how often they can afford attack operations.
-  - **Who uses it**: server init seeds attack pools using this multiplier.
-  - **Gotchas**: this is “strategy layer” pacing, not per-unit combat skill.
+  - **What it does**: controls how quickly enemies accumulate resources for attack operations and how frequently they launch attacks against player positions.
+  - **When to change**: increase for more frequent and intense enemy attacks; decrease for slower-paced campaigns with less pressure.
+  - **Gotchas**: this affects strategic-level attack frequency, not individual unit combat effectiveness.
 
 - **Invader balance multiplier** (`A3A_invaderBalanceMul`)
-  - **What it does**: separate scaling for invader side (compared to occupants).
-  - **Who uses it**: server init resources for invaders use this multiplier.
+  - **What it does**: separate difficulty scaling specifically for the Invader faction, independent of Occupants.
+  - **When to change**: adjust if you want Invaders to be stronger or weaker than Occupants; useful for asymmetric difficulty or specific campaign narratives.
 
 - **Enemy response time** (`A3A_enemyResponseTime`)
-  - **What it does**: changes reaction delays (how quickly AI responds to contacts/events).
-  - **Who uses it**: enemy response scheduling logic.
+  - **What it does**: controls how quickly enemy forces react to player actions and contacts.
+  - **When to change**: decrease for more aggressive, fast-reacting enemies; increase for slower, more methodical enemy responses.
 
 - **Attack HQ proximity multiplier** (`A3A_attackHQProximityMul`)
-  - **What it does**: increases attack pressure when fights are close to HQ (strategy layer).
-  - **Who uses it**: attack-selection logic weights HQ-proximity.
+  - **What it does**: increases enemy attack frequency and intensity when combat occurs near your HQ.
+  - **When to change**: increase for more pressure when fighting near base (defensive focus); decrease to prevent HQ from being constantly under siege.
 
 - **Enemy skill multiplier** (`A3A_enemySkillMul`)
-  - **What it does**: scales per-unit AI skill settings for enemy forces.
+  - **What it does**: directly scales AI combat skill (accuracy, reaction time, tactics) for all enemy units.
+  - **When to change**: increase for deadlier, more accurate enemy AI; decrease for easier combat encounters.
 
 - **Rebel skill multiplier** (`A3A_rebelSkillMul`)
-  - **What it does**: scales per-unit AI skill settings for rebel AI.
+  - **What it does**: directly scales AI combat skill (accuracy, reaction time, tactics) for all rebel AI units you recruit.
+  - **When to change**: increase to make your recruited forces more effective; decrease for more challenging gameplay where you rely more on player skill.
 
 ## Supports / “spicy stuff”
 
 - **Napalm enabled** (`napalmEnabled`)
-  - **What it does**: allows napalm to be selected/used where supported.
-  - **Who uses it**:
-    - AI airstrike support selection weights `NAPALM` as one of the possible bomb types (otherwise napalm weight is 0).
-    - Rebel “bomb run” support tries to use napalm (and falls back if disabled).
-  - **Gotchas**: if disabled, you can still see non-napalm variants (HE/cluster) and carpet bombing is separate.
+  - **What it does**: allows napalm weapons to be used in airstrikes and bomb runs.
+  - **When to change**: enable for more devastating area-denial weapons; disable for less intense support options or performance reasons.
+  - **Gotchas**: disabling napalm doesn't remove other bomb types (HE, cluster) or carpet bombing, which are controlled separately.
 
 - **Allow unfair supports** (`allowUnfairSupports`)
-  - **What it does**: unlocks support types flagged as “unfair” in the AI support system.
-  - **Who uses it**: AI support type initialization filters out “unfair” supports unless this is enabled.
-  - **Which supports** (current code):
-    - **`CARPETBOMBS`**: wide-area carpet bombing (AI-selected; requires an available airbase).
-    - **Cruise missile (`MISSILE`)**: gated here too, but currently **hard-disabled** by the availability function (`if(true) exitWith {-1};`) pending fixes; also template-restricted (eg VN disallowed) and requires being in range of the side’s carrier marker.
+  - **What it does**: enables extremely powerful support types that may be considered unbalanced.
+  - **When to change**: enable for maximum firepower and cinematic moments; disable for more balanced, tactical gameplay.
+  - **Includes**: carpet bombing (wide-area devastation, requires airbase) and cruise missiles (currently disabled pending fixes; also requires carrier access and specific map templates).
 
 - **Allow futuristic supports** (`allowFuturisticSupports`)
-  - **What it does**: unlocks “futuristic” support types flagged as such in the AI support system.
-  - **Who uses it**: AI support type initialization filters out these supports unless enabled.
-  - **Which supports** (current code):
-    - **`ORBITALSTRIKE`**: orbital strike (AI-selected, very expensive).
+  - **What it does**: enables science-fiction style support weapons that may not fit realistic campaigns.
+  - **When to change**: enable for high-tech/modern campaigns; disable for realistic or period-accurate gameplay.
+  - **Includes**: orbital strikes (extremely powerful but very expensive; AI can select these if available).
 
 ## Garrisons
 
 - **Rebel garrison limit** (`A3A_rebelGarrisonLimit`)
-  - **What it does**: caps the maximum number of rebel garrison units by location type.
-  - **Who uses it**: `getGarrisonLimit` returns:
-    - **Cities**: derived from `sqrt(pop)` (not a fixed number).
-    - **Airports**: `~1.5x` the base limit.
-    - **Factories/resources**: `~0.5x` the base limit.
-    - **Others**: base limit.
-  - **Special value**: `-1` means no limit.
+  - **What it does**: sets the base limit for how many rebel garrison units can be placed at each location type.
+  - **Scaling by location**:
+    - **Cities**: scaled by city population (larger cities can have more garrisons).
+    - **Airports**: approximately 1.5x the base limit.
+    - **Factories/resources**: approximately 0.5x the base limit.
+    - **Other locations**: base limit applies.
+  - **When to change**: increase to allow larger defensive forces; decrease to limit garrison sizes and reduce resource costs. Set to `-1` to remove limits entirely.
+  - **Special value**: `-1` means no garrison limit.
 
 ## Equipment / unlock rules
 
 - **Minimum weapons** (`minWeaps`)
-  - **What it does**: enables the “unlock by quantity” system: items become permanently unlocked once you have at least `minWeaps` copies in the arsenal.
-  - **Who uses it**: arsenal management loop; also used as a general “no unlocks” switch.
-  - **Special value**: `-1` disables unlock progression entirely (many systems treat this as “no unlocks”).
+  - **What it does**: enables the unlock system - items become permanently unlocked once you have this many copies in the arsenal.
+  - **When to change**: increase to make unlocks slower (more items needed); decrease for faster unlocks; set to `-1` to disable unlocks entirely (all items available from start).
+  - **Special value**: `-1` disables unlock progression entirely and makes all items immediately available.
 
 - **Guest item limit** (`A3A_guestItemLimit`)
-  - **What it does**: caps how many items guests can take (anti-drain / anti-hoarding).
-  - **Who uses it**: arsenal limit enforcement.
+  - **What it does**: maximum number of items guests can take from the arsenal at once.
+  - **When to change**: decrease to prevent guests from taking too many items (anti-hoarding); increase to give guests more freedom; set to `-1` or `0` to remove limits.
 
 - **Unlocked unlimited ammo** (`unlockedUnlimitedAmmo`)
-  - **What it does**: when a weapon becomes unlocked, also unlocks its primary magazine (to avoid “unlocked gun but no mags”).
-  - **Who uses it**: arsenal management unlock step.
+  - **What it does**: automatically unlocks the primary magazine type when a weapon is unlocked, preventing the situation where you have an unlocked gun but no ammo for it.
+  - **When to change**: enable for convenience (recommended); disable if you want magazines to be unlocked separately from weapons.
 
 - **Allow unguided launchers** (`allowUnguidedLaunchers`)
-  - **What it does**: blocks unlock progression for rocket launchers and their magazines (simulation `shotrocket`) when disabled.
-  - **Who uses it**: arsenal management filters both item categories and magazine simulations.
+  - **What it does**: allows or prevents unguided rocket launchers (like RPGs) from being unlocked.
+  - **When to change**: disable to restrict access to rocket launchers (balance or realism); enable for full weapon variety.
 
 - **Allow guided launchers** (`allowGuidedLaunchers`)
-  - **What it does**: blocks unlock progression for missile launchers and their magazines (simulation `shotmissile`) when disabled.
-  - **Who uses it**: arsenal management filters both item categories and magazine simulations.
+  - **What it does**: allows or prevents guided missile launchers (like Javelins) from being unlocked.
+  - **When to change**: disable to restrict access to guided missiles (balance or realism); enable for full weapon variety.
 
 - **Allow unlocked explosives** (`allowUnlockedExplosives`)
-  - **What it does**: blocks unlock progression for explosives when disabled.
-  - **Who uses it**: arsenal management category filter.
+  - **What it does**: allows or prevents explosives (grenades, mines, etc.) from being unlocked.
+  - **When to change**: disable to restrict access to explosives (balance or safety concerns); enable for full equipment variety.
 
 - **Start with long range radio** (`startWithLongRangeRadio`)
-  - **What it does**: adds long-range radios to starting rebel equipment for some radio mods.
-  - **Who uses it**: ACRE path appends LR radios when enabled.
-  - **Gotchas**: TFAR behavior differs (some TFAR settings are hard-set during init).
+  - **What it does**: includes long-range radios in starting rebel equipment when using radio mods like ACRE or TFAR.
+  - **When to change**: enable for immediate long-range communication; disable to require acquiring radios through gameplay.
+  - **Gotchas**: TFAR may have different behavior compared to ACRE due to how TFAR initializes settings.
 
 ## Loot-to-crate / LTC
 
 - **Loot to crate radius** (`LootToCrateRadius`)
-  - **What it does**: sets the radius used by the “loot to crate” action to vacuum bodies and ground loot into a container.
-  - **Who uses it**: LTC scans dead bodies + weapon holders within radius and transfers contents.
-  - **Gotchas**:
-    - LTC forcibly breaks undercover (`player setCaptive false`).
-    - The target container is marked `stopPostmortem = true` to prevent cleanup eating it mid-process.
+  - **What it does**: radius (in meters) for the "loot to crate" action that automatically collects items from dead bodies and ground loot into a container.
+  - **When to change**: increase for easier loot collection over larger areas; decrease to require closer proximity or manual looting.
+  - **Gotchas**: using this action will break undercover status, and the container is protected from automatic cleanup during the transfer process.
 
 - **LTC loot unlocked** (`LTCLootUnlocked`)
-  - **What it does**: decides whether LTC respects unlock rules.
-  - **Who uses it**: when disabled, LTC uses unlocked item sets as a filter (items considered “already unlocked” are treated differently during transfer).
+  - **What it does**: controls whether the loot-to-crate system respects unlock restrictions when transferring items.
+  - **When to change**: enable to maintain unlock progression (only unlocked items transfer easily); disable to allow all items regardless of unlock status.
 
 ## Loot crate tuning (crate limits)
 
-These params affect `A3A_fnc_fillLootCrate` which fills loot crates and some garrison crates.
+These parameters control how loot crates and garrison crates are filled with equipment.
 
 - **Bob chaos crates** (`bobChaosCrates`)
-  - **What it does**: switches loot generation from “biased toward not-yet-unlocked, gaussian-ish amounts” to “pure random”.
-  - **Who uses it**: loot crate picker functions for weapon selection, number-of-types, and quantity.
+  - **What it does**: switches loot generation between organized (unlock-focused) and completely random.
   - **Behavior**:
-    - On: random categories, random items, random quantities.
-    - Off: prefers items not yet unlocked; uses distributions to avoid extreme crates.
+    - **On**: completely random categories, items, and quantities (chaotic).
+    - **Off**: biased toward items not yet unlocked, with balanced quantities (organized progression).
+  - **When to change**: enable for unpredictable, varied loot; disable for progression-focused gameplay where crates help unlock new items.
 
 - **Crate player scaling** (`cratePlayerScaling`)
-  - **What it does**: reduces loot amounts as player count increases (to stop loot inflation on big servers).
-  - **Who uses it**: loot crate amount picker scales by approximately \(1 / (1 + \text{players}/20)\).
-  - **Gotchas**: if `minWeaps < 0` (no unlocks), scaling is disabled and treated as factor 1.
+  - **What it does**: automatically reduces loot amounts in crates as more players join the server (prevents loot inflation on large servers).
+  - **When to change**: enable to maintain balance on busy servers where many players would otherwise receive full loot; disable for consistent loot regardless of player count.
+  - **Gotchas**: scaling is automatically disabled if unlocks are turned off (minWeaps < 0).
 
 - **Type max** (`crate*TypeMax`)
-  - **What it does**: caps the number of *different* types rolled for that category.
-  - **Who uses it**: loot crate generator loops up to a random number of distinct types.
+  - **What it does**: maximum number of different item types that can appear in a crate for each category (weapons, magazines, items, etc.).
+  - **When to change**: increase for more variety per crate; decrease to keep crates focused on fewer item types.
 
 - **Number max** (`crate*NumMax`)
-  - **What it does**: caps the *quantity* rolled per selected type (then possibly scaled by player count).
-  - **Who uses it**: loot crate generator amount picker.
+  - **What it does**: maximum quantity of each item type that can appear in a crate (before player scaling is applied).
+  - **When to change**: increase for more generous loot; decrease to limit how many of each item can be found per crate.
 
 ## Development / logging
 
 - **Log level** (`LogLevel`)
-  - **What it does**: sets mission logging verbosity (`1..4`).
-  - **Who uses it**: server publishes it immediately during init; various systems change logging cadence/detail based on it.
+  - **What it does**: controls how much detail is written to server logs (1 = minimal, 4 = verbose debugging).
+  - **When to change**: increase for troubleshooting issues; decrease for cleaner logs on production servers. Higher levels may impact performance.
 
 - **Log debug console** (`A3A_logDebugConsole`)
-  - **What it does**: controls debug console logging access level.
-  - **Who uses it**: server publishes it during init; client/dev tools respect it.
+  - **What it does**: controls who can access debug console logging features.
+  - **When to change**: restrict to admins/developers for security; open up for public debugging or testing servers.

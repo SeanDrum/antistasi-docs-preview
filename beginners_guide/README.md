@@ -92,23 +92,47 @@ This section is intentionally short. For Antistasi, the question is always: **�
 - **Factories**: Factories are an **income multiplier** rather than a big payout on their own. Each factory you own increases how much money your controlled **resource sites** produce (stacking per factory), so factories scale better the more of the economy you already control. Prioritize factories once you’re ready to turn “some income” into “steady funding”.
 - **Radio towers**: Radio towers (antennas) drive the “information war”: holding them increases how often you get **intel** like enemy vehicle reveals and warnings about enemy support/strikes. They also make “hearts and minds” actions in nearby towns more effective when the tower is alive and on your side. Because the benefit applies across many fights, radio towers are often worth hitting early.
 
----
-
-### Towns
-
-Towns are where you get support (or lose it). Fighting badly in towns can make everything harder later.
 
 ---
 
 ### Info bar
 
-Antistasi surfaces a lot of campaign state (money, HR, aggression, etc.). Learn where to check it so you’re not guessing.
+The info bar is a persistent display at the top of your screen showing key campaign metrics. It displays: **HR** (Human Resources for recruiting), your **personal money**, **aggression levels** for Occupants and Invaders (how much they're targeting you), **war tier** (campaign progression), faction names, and your **undercover status**. If you're the commander, it also shows faction **resources** (shared money) and available **bomb runs**. You can toggle it on/off with a keybind (default Ctrl+F12) or via the player menu. Check it regularly to track your progress and enemy threat levels.
 
 ---
 
 ### Your Headquarters (HQ)
 
-HQ is your “home base” for a lot of campaign actions. Don’t turn it into a permanent battlefield by dragging enemies back to it.
+HQ is your "home base" for a lot of campaign actions. Don't turn it into a permanent battlefield by dragging enemies back to it.
+
+At HQ, you can:
+- **Recruit units** (at the flag): Spend HR to add AI squadmates to your team. These units will follow you and can be equipped with gear from the arsenal.
+- **Access arsenal** (at the vehicle box): Customize your loadout with unlocked gear and weapons. The arsenal contains everything you've unlocked through campaign progress and captures.
+- **Access garage** (at the vehicle box): Retrieve stored vehicles or manage your vehicle fleet. You can store vehicles here to keep them safe and access them later from any friendly garage location.
+- **Buy vehicles** (at the flag or vehicle box): Purchase new vehicles with your personal money. This is how you expand your motor pool when you need specific vehicles for missions.
+- **Restore units** (at the vehicle box): Bring back unconscious AI squadmates who were downed in combat. This lets you recover your team without having to recruit replacements.
+- **Request missions** (from Petros): If you're a member, ask for new mission assignments. Petros will offer various mission types based on current campaign needs and your war tier.
+
+---
+
+### Arsenal
+
+The **Arsenal** is your primary equipment management system, accessed at the vehicle box at HQ. It's where you customize your loadout with weapons, gear, and equipment collected during the campaign.
+
+**How it works:**
+- **Access**: Interact with the vehicle box at HQ to open the arsenal interface
+- **Item collection**: Equipment looted from enemies and placed in the vehicle box is automatically added to the arsenal inventory
+- **Unlocking system**: When you collect enough copies of an item (default 25), it becomes **permanently unlocked** with unlimited availability for all players
+- **Limited items**: Items below the unlock threshold have finite quantities—take them and they're gone until you loot more
+- **Member privileges**: Commanders and members can take any item regardless of quantity; regular players may be restricted until sufficient copies are available
+
+**What gets unlocked:**
+- Weapons (rifles, pistols, launchers), attachments (optics, grips, suppressors), uniforms, vests, backpacks, headgear, NVGs, magazines, explosives, and utility items
+- Intel missions can also unlock weapons directly
+- Starting equipment from your faction is available immediately
+- Ammo for unlocked weapons can be automatically unlocked if enabled in parameters
+
+The arsenal is central to progression: collect enemy equipment, build up your inventory, and unlock better gear as your stockpiles grow. Loot everything you can and bring it back to HQ to expand your available equipment.
 
 ---
 

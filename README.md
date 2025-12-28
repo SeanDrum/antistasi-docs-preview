@@ -14,13 +14,13 @@ We aim to keep the documentation in three “levels”:
 - **Detailed Reference Guide** — deeper mechanics and numbers (optional).
 - **Dev Guide** — developer/admin focused notes (optional).
 
-Right now we’re starting with just one guide:
+Right now we're starting with just one guide:
 
 - **[Beginners Guide](beginners_guide/README.md)**
 
 ## Notes
 
-- This guide is a “living” rewrite inspired by the older docs site:
+- This guide is a "living" rewrite inspired by the older docs site:
   - [Antistasi Docs index](https://official-antistasi-community.github.io/A3-Antistasi-Docs/index.html)
   - [Beginners Guide (raw)](https://official-antistasi-community.github.io/A3-Antistasi-Docs/beginners_guide/raw_beginners_guide.html#beginners-guide)
 
