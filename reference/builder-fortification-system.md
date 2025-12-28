@@ -44,16 +44,41 @@ Construction materials remain on the ground for 20 minutes. If you don't complet
 
 ## Available Structures
 
-The builder system allows you to construct various defensive structures including:
+The builder system allows you to construct various defensive structures. The exact structures available may vary slightly by map climate (arid, tropical, or temperate), but the following are standard across all maps:
 
-- **Sandbag walls and barriers**: Basic cover and obstacles
-- **Bunkers**: Heavy defensive positions
-- **HMG emplacements**: Static heavy machine gun positions
-- **Watchtowers**: Observation and elevated firing positions
-- **Barriers and obstacles**: Vehicle barriers and defensive obstacles
-- **Repairable structures**: You can also repair destroyed buildings by interacting with their ruins in builder mode
+**Large Bunkers & Fortifications:**
+- Large Bag Bunker (arid maps): 300 resources
+- Large Bag Bunker Green (tropical/temperate maps): 300 resources
+- Bag Bunker Tower (arid maps): 300 resources
+- H-Barrier Tower (tropical/temperate maps): 300 resources
+- Pillbox Bunker (hexagonal): 200 resources
+- Small Bag Bunker (arid maps): 60 resources
+- Small Bag Bunker Green (tropical/temperate maps): 60 resources
 
-The exact structures available depend on your faction's equipment pool and what has been unlocked through campaign progress.
+**Structures & Sheds:**
+- Shed (9): 120 resources
+- Shed (10): 140 resources
+- Guard Box (brown): 80 resources
+- Helipad: 1500 resources
+
+**Barriers & Fences:**
+- Sandbag Barricade (half): 20 resources
+- Barricade (4m): 30 resources
+- Slum Wall (2m): 5 resources
+- Tyres (vehicle obstacle): 10 resources
+
+**Sandbag Fences (Arid Maps):**
+- Long Sandbag Fence: 10 resources
+- Round Sandbag Fence: 10 resources
+- Short Sandbag Fence: 10 resources
+
+**Sandbag Fences (Tropical/Temperate Maps):**
+- Long Sandbag Fence Green: 10 resources
+- Round Sandbag Fence Green: 10 resources
+- Short Sandbag Fence Green: 10 resources
+
+**Repairable Structures:**
+You can also repair destroyed buildings by interacting with their ruins in builder mode. The repair cost is calculated based on the building's size (bounding box volume), using a formula of 6 times the square root of the volume, rounded to the nearest 10.
 
 ## Cost & Resource Management
 
