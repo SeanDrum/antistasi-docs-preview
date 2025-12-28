@@ -418,3 +418,5 @@ For detailed information about core game mechanics and systems, see the followin
 
 - [Aggression System](reference/aggression-system.md) - Detailed explanation of how the aggression system works, how it increases and decays, and how it affects enemy behavior
 - [War Tier](reference/war-tier.md) - Complete guide to war tier calculation, progression thresholds, and how it affects enemy equipment and support availability
+- [Intel & Intelligence Gathering](reference/intel-intelligence-gathering.md) - Complete guide to the four intel types (Small, Medium, Large, Encrypted), how to find them, their rewards, and how radio towers enhance intel gathering
+- [Enemy Reactions & Counter-Attacks](reference/enemy-reactions-counter-attacks.md) - Detailed explanation of Quick Reaction Forces (QRF), enemy support calls (artillery, mortars, airstrikes, CAS, etc.), major attacks, and how enemies respond to your actions
