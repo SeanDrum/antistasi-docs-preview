@@ -275,3 +275,4 @@ The Commander sees additional information in the persistent info bar at the top 
 
 The info bar provides real-time campaign status and is essential for strategic decision-making.
 
+

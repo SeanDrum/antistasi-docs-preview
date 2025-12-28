@@ -69,3 +69,4 @@ Your rank serves as a long-term indicator of your contribution to the campaign a
 
 When players are promoted, all players receive a notification message listing everyone who was promoted during that check. Promotions are checked periodically by the server, and you'll see your new rank reflected immediately upon promotion.
 
+

@@ -94,3 +94,4 @@ Counter battery fire is an enemy response system that detects when you fire arti
 - Fire multiple artillery pieces simultaneously to overwhelm enemy response
 - Coordinate with teammates to suppress counter battery positions
 - Use smoke or other distractions to mask your position
+

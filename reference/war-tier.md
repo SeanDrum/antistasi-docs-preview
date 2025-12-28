@@ -161,3 +161,4 @@ When your war tier changes, you'll receive a notification message from Petros in
 - War Tier affects many systems including vehicle spawning, support availability, and mission generation
 - The system uses a square root formula to create a natural progression curve
 
+

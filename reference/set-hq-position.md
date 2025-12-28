@@ -42,3 +42,4 @@ If your HQ feels like “a place we can chill between ops”, you’re probably 
 If it feels like “we’re constantly fighting here”, it’s probably in a bad location.
 
 
+

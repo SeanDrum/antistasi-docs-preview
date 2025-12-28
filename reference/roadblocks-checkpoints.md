@@ -26,3 +26,4 @@ Camps are similar to roadblocks but are larger defensive positions located off-r
 
 Camps spawn at approximately one-third the rate of roadblocks, so you'll encounter them less frequently but they'll be more challenging when you do find them.
 
+

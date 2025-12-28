@@ -129,3 +129,4 @@ Aggression values are automatically adjusted based on the number of active playe
 - Aggression updates occur every minute as part of the game's main loop
 - The system prevents simultaneous aggression changes to avoid conflicts
 
+

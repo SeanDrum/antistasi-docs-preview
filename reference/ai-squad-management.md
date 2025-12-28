@@ -124,3 +124,4 @@ Direct control is particularly useful for:
 - **Coordinate with team**: In multiplayer, communicate with other players about who has which specialists to avoid redundancy
 - **Use vehicle transport**: Large squads benefit from transport vehicles - order AI into vehicles to keep them together and protected during travel
 
+
