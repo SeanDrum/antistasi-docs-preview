@@ -420,16 +420,16 @@ Once you've successfully captured the point:
 
 ## Additional Reference Information
 
-For detailed information about core game mechanics and systems, see the following reference guides:
+For information about core game mechanics and systems, see the following references:
 
-- [Aggression System](reference/aggression-system.md) - Detailed explanation of how the aggression system works, how it increases and decays, and how it affects enemy behavior
-- [War Tier](reference/war-tier.md) - Complete guide to war tier calculation, progression thresholds, and how it affects enemy equipment and support availability
-- [Intel & Intelligence Gathering](reference/intel-intelligence-gathering.md) - Complete guide to the four intel types (Small, Medium, Large, Encrypted), how to find them, their rewards, and how radio towers enhance intel gathering
-- [Enemy Reactions & Counter-Attacks](reference/enemy-reactions-counter-attacks.md) - Detailed explanation of Quick Reaction Forces (QRF), enemy support calls (artillery, mortars, airstrikes, CAS, etc.), major attacks, and how enemies respond to your actions
-- [Counter Battery Fire](reference/counter-battery-fire.md) - Complete guide to how enemy garrisons detect and respond to player artillery and mortar fire, including detection mechanics, response times, and strategies to avoid counter battery
-- [Commander Guide](reference/commander-guide.md) - Complete guide to Commander-only features including training units, managing garrisons, calling fire support, HQ management, and all Commander abilities
-- [Roadblocks & Checkpoints](reference/roadblocks-checkpoints.md) - Explanation of how enemy factions dynamically spawn roadblocks and camps on roads, how they detect undercover players, and how destroying them affects local reputation
-- [Builder/Fortification System](reference/builder-fortification-system.md) - Complete guide to the builder system for Team Leaders and Engineers, including how to place fortifications, construction mechanics, build times, and available structures
-- [Player Rank System](reference/player-rank-system.md) - Overview of how players earn ranks through score points, rank progression requirements, and how rank affects commander election priority
-- [AI Squad Management (Basic)](reference/ai-squad-management.md) - Guide to recruiting AI squadmates, basic command controls, dismissing units, and using direct control to take control of individual AI units for precise tactical positioning
-- [Airstrikes](reference/airstrikes.md) - Complete guide to player-controlled airstrikes including HE, Cluster, and Napalm bomb types, their effects on different targets, bomb run costs, and tactical usage
+- [Aggression System](reference/aggression-system.md) - How the aggression system works, how it increases and decays, and how it affects enemy behavior
+- [War Tier](reference/war-tier.md) - War tier calculation, progression thresholds, and how it affects enemy equipment and support availability
+- [Intel & Intelligence Gathering](reference/intel-intelligence-gathering.md) - The four intel types (Small, Medium, Large, Encrypted), how to find them, their rewards, and how radio towers enhance intel gathering
+- [Enemy Reactions & Counter-Attacks](reference/enemy-reactions-counter-attacks.md) - Quick Reaction Forces (QRF), enemy support calls (artillery, mortars, airstrikes, CAS, etc.), major attacks, and how enemies respond to your actions
+- [Counter Battery Fire](reference/counter-battery-fire.md) - How enemy garrisons detect and respond to player artillery and mortar fire, including detection mechanics, response times, and strategies to avoid counter battery
+- [Commander Guide](reference/commander-guide.md) - Commander-only features including training units, managing garrisons, calling fire support, HQ management, and all Commander abilities
+- [Roadblocks & Checkpoints](reference/roadblocks-checkpoints.md) - How enemy factions dynamically spawn roadblocks and camps on roads, how they detect undercover players, and how destroying them affects local reputation
+- [Builder/Fortification System](reference/builder-fortification-system.md) - The builder system for Team Leaders and Engineers, including how to place fortifications, construction mechanics, build times, and available structures
+- [Player Rank System](reference/player-rank-system.md) - How players earn ranks through score points, rank progression requirements, and how rank affects commander election priority
+- [AI Squad Management (Basic)](reference/ai-squad-management.md) - Recruiting AI squadmates, basic command controls, dismissing units, and using direct control to take control of individual AI units for precise tactical positioning
+- [Airstrikes](reference/airstrikes.md) - Player-controlled airstrikes including HE, Cluster, and Napalm bomb types, their effects on different targets, bomb run costs, and tactical usage
