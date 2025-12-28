@@ -13,6 +13,7 @@ This guide is written exclusively for Antistasi Community Edition and is largely
   - [Info bar](#info-bar)
   - [Player Roles & Abilities](#player-roles--abilities)
   - [Your Headquarters (HQ)](#your-headquarters-hq)
+  - [Missions](#missions)
   - [Arsenal](#arsenal)
   - [Commander and member functionality (advanced)](#commander-and-member-functionality-advanced)
   - [Undercover](#undercover)
@@ -163,6 +164,40 @@ At HQ, you can:
 - **Request missions** (from Petros): If you're a member, ask for new mission assignments. Petros will offer various mission types based on current campaign needs and your war tier.
 
 Full reference: **[Your Headquarters](../reference/your-headquarters.md)**.
+
+---
+
+### Missions
+
+Missions are tactical operations that advance your resistance campaign. They can be **requested from Petros** at HQ (if you're a commander or member) or **spawn automatically** based on campaign events and conditions.
+
+**Who can create missions:**
+- **Commanders and members**: Can request specific mission types from Petros at HQ
+- **Automatic spawns**: Some missions appear automatically based on campaign state, enemy actions, or time-based triggers
+- **Dynamic events**: Special missions like "Defend Petros" spawn when HQ comes under attack
+
+**What missions can accomplish:**
+- **Generate income**: Many missions reward money or resources directly
+- **Increase town support**: Successful missions often boost rebel support in nearby towns, improving your passive income and hearts-and-minds progress
+- **Delay enemy attacks**: Some missions can postpone enemy counterattacks or large-scale operations
+- **Capture equipment**: Destroy missions may allow you to steal enemy vehicles or destroy critical infrastructure
+- **Rescue allies**: Rescue missions free prisoners who join your cause, providing HR and morale boosts
+- **Strategic disruption**: Logistics and convoy missions disrupt enemy supply lines and weaken their capabilities
+
+**Mission types:**
+
+- **Assassination** (AS): Eliminate high-value enemy targets like officers or traitors
+- **Conquest** (CON): Capture enemy-held locations like outposts or resource sites
+- **Convoy** (CONVOY): Intercept and ambush enemy supply convoys
+- **Destroy** (DES): Destroy enemy infrastructure like vehicles, helicopters, or radio towers
+- **Logistics** (LOG): Secure supplies through bank heists, salvage operations, or ammo truck captures
+- **Rescue** (RES): Free prisoners of war or evacuate refugees from danger zones
+- **Support** (SUPP): Deliver supplies to friendly towns to increase their support for your cause
+
+**Mission outcomes:**
+Each mission has success and failure conditions with different rewards and penalties. Success typically provides money, town support boosts, and strategic advantages, while failure may reduce support, increase enemy aggression, or trigger negative events.
+
+Full reference: **[Missions Reference](../reference/missions.md)**.
 
 ---
 
