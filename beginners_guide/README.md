@@ -36,9 +36,6 @@ Things you can do here:
 - **Export / import** (only available for compatible saves).
 - **Delete / rename** saves.
 
-### Set HQ position
-
-See **[Set HQ position (HQ placement)](../reference/set-hq-position.md)**.
 
 ## Factions tab (who’s fighting)
 
@@ -138,21 +135,63 @@ The arsenal is central to progression: collect enemy equipment, build up your in
 
 ### Commander and member functionality (advanced)
 
-This is more advanced and **not covered in this beginners guide**. Placeholder:
+This is more advanced and **not covered in this beginners guide**.
 
 - **[Commander and member functionality](../reference/commander-and-member-functionality.md)**
 
 ---
 
-### Undercover and how to use it
+### Undercover
 
-Undercover is great for scouting and getting into position before you start shooting. Assume it will eventually break; plan your exit.
+Undercover lets you move through enemy territory disguised as a civilian. Access it via the **Player menu** (click "Go Undercover"). It's great for scouting and positioning, but plan your exit—it will break.
+
+**To go undercover, you need:**
+- **Civilian uniform** (no military gear)
+- **No weapons, vests, helmets, or NVGs**
+- **Civilian vehicle only** (cars, bikes, civilian trucks—stay on roads when enemies are nearby)
+- Not near enemies who can see you
+- Not compromised (wait 30 minutes after being reported)
+
+**What breaks undercover:**
+- **Shooting or combat actions**
+- **Equipping military gear** (weapons, vests, helmets, NVGs)
+- **Entering enemy bases** (airbases are instant detection; outposts check based on aggression)
+- **Driving off-road** near enemies or in non-civilian vehicles
+- **Being spotted** by enemies
+
+When undercover breaks, you're marked as compromised for **30 minutes** and can't go undercover again during that time. Your AI squadmates automatically disguise themselves when you go undercover if you're the group leader. Treat undercover as temporary—always have an escape plan ready.
 
 ---
 
-### Victory / loss condition
+### Victory / loss conditions
 
-Winning is usually about **controlling key strategic locations** and **having enough population support**—not just painting the whole map your color.
+The campaign has clear win and lose conditions based on population support and strategic control. The system automatically checks these conditions after key events (like capturing airbases or losing cities) and during regular resource check cycles.
+
+**Victory condition:**
+
+You win the campaign when **both** of these are true:
+
+1. **Control all airbases** on the map. Airbases (airports) are the highest-value strategic targets, and you must capture every single one from the enemy factions.
+2. **Achieve majority population support**: More than 50% of the total civilian population must support your rebellion. This is calculated as:
+   - For each city you **control**: Count the full city population multiplied by that city's rebel support percentage.
+   - For each city you **don't control**: Count only 50% of the city population multiplied by that city's rebel support percentage.
+   - If the total "rebel-supported population" exceeds 50% of the map's total population, this condition is met.
+
+**What this means in practice:**
+- You can't win just by taking all airbases—you also need hearts-and-minds work.
+- You can't win just by building support—you must control every airbase too.
+- Controlling cities doubles their contribution to your support total, making city captures valuable for both income and victory progress.
+- The victory check runs immediately after you capture an airbase, so you'll know right away if you've won.
+
+**Loss condition:**
+
+You lose the campaign if **more than one-third (33.33%) of the total civilian population is killed** by cities being destroyed.
+
+**How cities get destroyed:**
+- **Invader punishment attacks**: If the Invaders launch a punishment attack against one of your cities and you fail to defend it, they will destroy the city completely. This involves killing all civilians, mining the area, and marking the location as destroyed. The civilians are permanently counted towards the loss condition and the city cannot be rebuilt. Any benefits like HR or income will no longer occur from that location. You will be given a "Punishment" mission to warn you that this act is occuring, it is obviously really important you show up and defend towns targeted by punishment missions.
+- **Orbital strikes**: If an enemy orbital strike hits within 200 meters of a city, that city is immediately destroyed.
+
+
 
 ---
 
@@ -170,18 +209,6 @@ Mission types commonly include:
 
 Pick missions that match your group size and patience.
 
----
-
-## Vehicles
-
-Vehicles are campaign progress. Treat them like valuable assets, not disposable taxis.
-
----
-
-## Walkthrough (very short)
-
-- **Early**: get gear and intel, stay alive, don’t start base sieges.
-- **Mid**: take a strategic point, defend it, build momentum.
-- **Late**: airbases and big pushes—expect heavy resistance.
+--
 
 
