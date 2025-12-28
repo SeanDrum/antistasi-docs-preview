@@ -2,9 +2,6 @@
 
 This is the casual “how do I actually play this?” guide.
 
-If you want to compare tone/structure, the older docs site is here:
-
-- [Beginners Guide (raw)](https://official-antistasi-community.github.io/A3-Antistasi-Docs/beginners_guide/raw_beginners_guide.html#beginners-guide)
 
 ---
 
@@ -73,9 +70,7 @@ Helpful options in this tab:
 
 ## Params tab (campaign rules)
 
-This tab is a big list of “server rules” / tuning options.
-
-Example: **Game Mode** is explicitly marked “Do NOT change this mid mission”.
+This tab is a big list of “server rules” / tuning options. This allows for fine grained control over difficulty, realism, convenience, and many other things. Leaving them as default will be a "middle of the road" experience for all the aforementioned factors.
 
 Full reference:
 
@@ -83,9 +78,9 @@ Full reference:
 
 ---
 
----
+## Game Mechanics
 
-# Map markers (quick meaning)
+### Map markers (quick meaning)
 
 This section is intentionally short. For Antistasi, the question is always: **“What does this marker mean for the campaign?”**
 
@@ -98,31 +93,45 @@ This section is intentionally short. For Antistasi, the question is always: **�
 
 ---
 
-# Towns
+### Towns
 
 Towns are where you get support (or lose it). Fighting badly in towns can make everything harder later.
 
 ---
 
-# Info bar
+### Info bar
 
 Antistasi surfaces a lot of campaign state (money, HR, aggression, etc.). Learn where to check it so you’re not guessing.
 
 ---
 
-# Your Headquarters (HQ)
+### Your Headquarters (HQ)
 
 HQ is your “home base” for a lot of campaign actions. Don’t turn it into a permanent battlefield by dragging enemies back to it.
 
 ---
 
-# Commander and member functionality
+### Commander and member functionality (advanced)
 
-Some actions are restricted to the commander/admin roles. If you never command, you can ignore most of the management—but it’s still useful to understand what the commander is trying to do.
+This is more advanced and **not covered in this beginners guide**. Placeholder:
+
+- **[Commander and member functionality](../reference/commander-and-member-functionality.md)**
 
 ---
 
-# Missions
+### Undercover and how to use it
+
+Undercover is great for scouting and getting into position before you start shooting. Assume it will eventually break; plan your exit.
+
+---
+
+### Victory / loss condition
+
+Winning is usually about **controlling key strategic locations** and **having enough population support**—not just painting the whole map your color.
+
+---
+
+## Missions
 
 Mission types commonly include:
 
@@ -138,25 +147,13 @@ Pick missions that match your group size and patience.
 
 ---
 
-# Undercover and how to use it
-
-Undercover is great for scouting and getting into position before you start shooting. Assume it will eventually break; plan your exit.
-
----
-
-# Vehicles
+## Vehicles
 
 Vehicles are campaign progress. Treat them like valuable assets, not disposable taxis.
 
 ---
 
-# Victory condition
-
-Winning is usually about **controlling key strategic locations** and **having enough population support**—not just painting the whole map your color.
-
----
-
-# Walkthrough (very short)
+## Walkthrough (very short)
 
 - **Early**: get gear and intel, stay alive, don’t start base sieges.
 - **Mid**: take a strategic point, defend it, build momentum.
