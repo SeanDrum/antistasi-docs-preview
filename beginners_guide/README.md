@@ -162,6 +162,8 @@ At HQ, you can:
 - **Restore units** (at the vehicle box): Bring back unconscious AI squadmates who were downed in combat. This lets you recover your team without having to recruit replacements.
 - **Request missions** (from Petros): If you're a member, ask for new mission assignments. Petros will offer various mission types based on current campaign needs and your war tier.
 
+Full reference: **[Your Headquarters](../reference/your-headquarters.md)**.
+
 ---
 
 ### Arsenal
