@@ -2,6 +2,45 @@
 
 This guide provides detailed information about all missions available in Antistasi, including objectives, rewards, and strategic considerations. All values are extracted directly from the game code.
 
+## Understanding Mission Rewards
+
+### Player Score
+
+**Player Score** is a personal progression system that tracks your individual performance. Each point of score you earn:
+
+- **Converts to personal money**: In multiplayer, each score point gives you **10 €** in personal money (points × 10)
+- **Tracks mission completion**: Earning 10 or more points from a mission counts as a completed mission for your statistics
+- **Is saved between sessions**: Your total score persists when you leave and rejoin the campaign
+
+Player Score rewards are awarded to all players within 500 meters of the mission objective when it's completed, while Commander Score is awarded separately to the commander role.
+
+### Commander Score
+
+**Commander Score** is awarded only to the player with the commander role. It functions identically to Player Score (10 € per point, tracks mission completion, is saved) but is tracked separately and represents the commander's leadership contribution to mission success.
+
+### Difficulty Levels
+
+Missions have a chance to be **"difficult"** based on your war tier, with higher war tiers increasing the likelihood. Difficult missions are not just more rewarding—they are actually harder to complete:
+
+- **Shorter time limits**: Difficult missions typically have **30 minute** time limits instead of 60-120 minutes, giving you less time to complete objectives
+- **More enemy defenders**: Difficult missions spawn additional enemy units (e.g., Kill The Officer gets 4 extra bodyguards on difficult)
+- **Stronger enemy units**: Difficult missions use more elite unit types (e.g., gunboats instead of transport boats, squad groups instead of police patrols, sentry groups instead of police groups)
+- **Faster enemy response**: Enemy reinforcements and patrols arrive more quickly on difficult missions (e.g., Refugees Evac enemy patrols spawn after 5 minutes instead of 5-35 minutes)
+- **Tighter spawn conditions**: Some missions have stricter requirements on difficult (e.g., Destroy Heli spawns closer to the objective at 2000m instead of 3000m, making it more dangerous)
+- **Longer hold requirements**: Missions requiring you to hold positions need longer hold times on difficult (e.g., City Supplies requires 4 minutes instead of 2 minutes)
+- **More aggressive enemy behavior**: Difficult missions trigger more immediate enemy actions (e.g., Destroy Vehicle enemies immediately add the vehicle to their group instead of waiting to detect players first)
+
+In exchange for this increased difficulty, difficult missions provide **higher rewards**—typically 1.5x to 2x the normal reward values for money, player scores, and commander scores.
+
+### Mission Scoring Notes
+
+- **Money rewards** from missions are added directly to faction resources (shared money)
+- **HR rewards** from missions are added directly to faction HR pool
+- **Enemy Aggression** values show changes to enemy threat levels with duration (e.g., "+10 for 120 minutes" means aggression increases by 10 points for 120 minutes, then decays)
+- **Next Enemy Attack** values indicate how mission outcomes affect timing of enemy counterattacks on specific markers
+- **Town Support** changes apply to the nearest town or the mission's objective town, depending on the mission type
+- **Difficulty** is determined by war tier: missions have an increasing chance to be "difficult" as war tier increases
+
 ## Table of Contents
 
 - [Assassination Missions](#assassination-missions)
@@ -22,29 +61,20 @@ This guide provides detailed information about all missions available in Antista
 
 **Description:** Eliminate a high-ranking enemy officer who is patrolling a hostile area. Officers are typically protected by bodyguards, and the mission difficulty increases with war tier. Successfully eliminating the officer disrupts enemy command structure and delays their operations.
 
-**Success (Normal Difficulty):**
-- **Money**: 300 €
+**Success:**
+- **Money**: 300 € (normal) / 600 € (difficult)
 - **HR**: 0
 - **Town Support**: -
-- **Next Enemy Attack**: 30 minute delay (via addTimeForIdle on marker)
+- **Next Enemy Attack**: 30 minute delay (normal) / 60 minute delay (difficult)
 - **Enemy Aggression**: -
-- **Player Score**: 10 points
-- **Commander Score**: 10 points
-
-**Success (Difficult):**
-- **Money**: 600 €
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: 60 minute delay (via addTimeForIdle on marker)
-- **Enemy Aggression**: -
-- **Player Score**: 20 points
-- **Commander Score**: 20 points
+- **Player Score**: 10 points (normal) / 20 points (difficult)
+- **Commander Score**: 10 points (normal) / 20 points (difficult)
 
 **Failure:**
 - **Money**: -
 - **HR**: -
 - **Town Support**: -
-- **Next Enemy Attack**: 30/60 minutes sooner (normal/difficult, via addTimeForIdle)
+- **Next Enemy Attack**: 30/60 minutes sooner (normal/difficult)
 - **Enemy Aggression**: -
 - **Player Score**: -
 - **Commander Score**: -10 points
@@ -55,23 +85,14 @@ This guide provides detailed information about all missions available in Antista
 
 **Description:** A civilian informant has been discovered working for the enemy. You must eliminate them before they can report on rebel activities. This mission is time-sensitive and failure can trigger enemy retaliation.
 
-**Success (Normal Difficulty):**
-- **Money**: 300 €
+**Success:**
+- **Money**: 300 € (normal) / 600 € (difficult)
 - **HR**: 0
 - **Town Support**: -
 - **Next Enemy Attack**: -
-- **Enemy Aggression**: +15 for 120 minutes (Occupants)
-- **Player Score**: 10 points
-- **Commander Score**: 5 points
-
-**Success (Difficult):**
-- **Money**: 600 €
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +30 for 120 minutes (Occupants)
-- **Player Score**: 20 points
-- **Commander Score**: 10 points
+- **Enemy Aggression**: +15 for 120 minutes (normal) / +30 for 120 minutes (difficult) (Occupants)
+- **Player Score**: 10 points (normal) / 20 points (difficult)
+- **Commander Score**: 5 points (normal) / 10 points (difficult)
 
 **Failed: Mission Expired:**
 - **Money**: -30% of current resources
@@ -97,23 +118,14 @@ This guide provides detailed information about all missions available in Antista
 
 **Description:** Special operations missions involve infiltrating enemy-held territory and capturing a strategic location (airport, city, or outpost). These missions require you to flip the location to rebel control within the time limit.
 
-**Success (Normal Difficulty):**
-- **Money**: 200 €
+**Success:**
+- **Money**: 200 € (normal) / 300 € (difficult)
 - **HR**: 0
 - **Town Support**: -
 - **Next Enemy Attack**: -
 - **Enemy Aggression**: +10 for 60 minutes
-- **Player Score**: 10 points
-- **Commander Score**: 10 points
-
-**Success (Difficult):**
-- **Money**: 300 € (200 * 1.5 bonus)
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +10 for 60 minutes
-- **Player Score**: 15 points (10 * 1.5 bonus)
-- **Commander Score**: 15 points (10 * 1.5 bonus)
+- **Player Score**: 10 points (normal) / 15 points (difficult)
+- **Commander Score**: 10 points (normal) / 15 points (difficult)
 
 **Failure:**
 - **Money**: -
@@ -132,23 +144,14 @@ This guide provides detailed information about all missions available in Antista
 
 **Description:** Capture and secure an enemy-held outpost or resource site. These missions are essential for expanding your territorial control and securing additional income sources. You'll need to eliminate the enemy garrison and hold the location long enough to capture the flag.
 
-**Success (Normal Difficulty):**
-- **Money**: 200 €
+**Success:**
+- **Money**: 200 € (normal) / 400 € (difficult)
 - **HR**: 0
 - **Town Support**: -
 - **Next Enemy Attack**: -
 - **Enemy Aggression**: -
-- **Player Score**: 10 points
-- **Commander Score**: 10 points
-
-**Success (Difficult):**
-- **Money**: 400 €
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: 20 points
-- **Commander Score**: 20 points
+- **Player Score**: 10 points (normal) / 20 points (difficult)
+- **Commander Score**: 10 points (normal) / 20 points (difficult)
 
 **Failure:**
 - **Money**: -
@@ -167,23 +170,14 @@ This guide provides detailed information about all missions available in Antista
 
 **Description:** Intercept an enemy ammunition supply convoy traveling between bases. Successfully ambushing the convoy provides you with valuable ammunition supplies and disrupts enemy logistics.
 
-**Success (Normal Difficulty):**
-- **Money**: 300 €
+**Success:**
+- **Money**: 300 € (normal) / 450 € (difficult)
 - **HR**: 0
 - **Town Support**: -
 - **Next Enemy Attack**: -
 - **Enemy Aggression**: +10 for 120 minutes
-- **Player Score**: 10 points
-- **Commander Score**: 10 points
-
-**Success (Difficult):**
-- **Money**: 450 € (300 * 1.5 bonus)
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +10 for 120 minutes
-- **Player Score**: 15 points (10 * 1.5 bonus)
-- **Commander Score**: 15 points (10 * 1.5 bonus)
+- **Player Score**: 10 points (normal) / 15 points (difficult)
+- **Commander Score**: 10 points (normal) / 15 points (difficult)
 
 **Failure:**
 - **Money**: -
@@ -200,23 +194,14 @@ This guide provides detailed information about all missions available in Antista
 
 **Description:** Attack a heavily guarded enemy convoy transporting armored vehicles or military equipment. These convoys are well-protected but offer significant rewards if successfully intercepted.
 
-**Success (Normal Difficulty):**
+**Success:**
 - **Money**: -
 - **HR**: 0
 - **Town Support**: -
 - **Next Enemy Attack**: -
 - **Enemy Aggression**: +10 for 120 minutes
-- **Player Score**: 10 points
-- **Commander Score**: 10 points
-
-**Success (Difficult):**
-- **Money**: -
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +10 for 120 minutes
-- **Player Score**: 15 points (10 * 1.5 bonus)
-- **Commander Score**: 15 points (10 * 1.5 bonus)
+- **Player Score**: 10 points (normal) / 15 points (difficult)
+- **Commander Score**: 10 points (normal) / 15 points (difficult)
 
 **Failure:**
 - **Money**: -
@@ -234,13 +219,13 @@ This guide provides detailed information about all missions available in Antista
 **Description:** Ambush a convoy transporting enemy funds. These missions provide substantial monetary rewards but are heavily guarded. The financial gain can significantly boost your campaign resources.
 
 **Success - Full Completion (Reached HQ):**
-- **Money**: 5000 € (normal) / 7500 € (difficult, 5000 * 1.5 bonus)
+- **Money**: 5000 € (normal) / 7500 € (difficult)
 - **HR**: 0
 - **Town Support**: -
 - **Next Enemy Attack**: -
 - **Enemy Aggression**: +10 for 120 minutes
-- **Player Score**: 10 points (normal) / 15 points (difficult, 10 * 1.5 bonus)
-- **Commander Score**: 10 points (normal) / 15 points (difficult, 10 * 1.5 bonus)
+- **Player Score**: 10 points (normal) / 15 points (difficult)
+- **Commander Score**: 10 points (normal) / 15 points (difficult)
 
 **Success - Partial (Destroyed but not delivered):**
 - **Money**: -
@@ -267,7 +252,7 @@ This guide provides detailed information about all missions available in Antista
 **Description:** Intercept a convoy transporting prisoners of war. Successfully rescuing these prisoners provides you with additional HR and money rewards per prisoner rescued.
 
 **Success:**
-- **Money**: 300 € per prisoner (normal) / 450 € per prisoner (difficult, 300 * 1.5 bonus)
+- **Money**: 300 € per prisoner (normal) / 450 € per prisoner (difficult)
 - **HR**: 1 per prisoner rescued
 - **Town Support**: -
 - **Next Enemy Attack**: -
@@ -299,23 +284,14 @@ This guide provides detailed information about all missions available in Antista
 
 **Description:** Attack an enemy convoy bringing reinforcements to a contested area. Preventing these reinforcements from reaching their destination weakens enemy positions and delays their offensive capabilities.
 
-**Success (Normal Difficulty):**
+**Success:**
 - **Money**: -
 - **HR**: 0
 - **Town Support**: -
 - **Next Enemy Attack**: -
 - **Enemy Aggression**: +10 for 120 minutes
-- **Player Score**: 10 points
-- **Commander Score**: 10 points
-
-**Success (Difficult):**
-- **Money**: -
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +10 for 120 minutes
-- **Player Score**: 15 points (10 * 1.5 bonus)
-- **Commander Score**: 15 points (10 * 1.5 bonus)
+- **Player Score**: 10 points (normal) / 15 points (difficult)
+- **Commander Score**: 10 points (normal) / 15 points (difficult)
 
 **Failure:**
 - **Money**: -
@@ -334,23 +310,14 @@ This guide provides detailed information about all missions available in Antista
 
 **Description:** Infiltrate an enemy airbase and either steal or destroy a heavily armored vehicle (anti-air vehicle). Successfully completing this mission denies the enemy valuable assets and can provide you with advanced equipment if you choose to steal rather than destroy.
 
-**Success (Normal Difficulty):**
-- **Money**: 300 €
+**Success:**
+- **Money**: 300 € (normal) / 600 € (difficult)
 - **HR**: 0
 - **Town Support**: -
 - **Next Enemy Attack**: -
 - **Enemy Aggression**: +5 for 60 minutes
-- **Player Score**: 10 points
-- **Commander Score**: 10 points
-
-**Success (Difficult):**
-- **Money**: 600 € (300 * 2 bonus)
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +5 for 60 minutes
-- **Player Score**: 20 points (10 * 2 bonus)
-- **Commander Score**: 20 points (10 * 2 bonus)
+- **Player Score**: 10 points (normal) / 20 points (difficult)
+- **Commander Score**: 10 points (normal) / 20 points (difficult)
 
 **Failure:**
 - **Money**: -
@@ -367,23 +334,14 @@ This guide provides detailed information about all missions available in Antista
 
 **Description:** Attack an enemy airbase to steal or destroy an enemy helicopter. Helicopters provide significant tactical advantages, so denying them to the enemy is strategically valuable.
 
-**Success (Normal Difficulty):**
-- **Money**: 300 €
+**Success:**
+- **Money**: 300 € (normal) / 600 € (difficult)
 - **HR**: 0
 - **Town Support**: -
 - **Next Enemy Attack**: -
 - **Enemy Aggression**: -
-- **Player Score**: 10 points
-- **Commander Score**: 10 points
-
-**Success (Difficult):**
-- **Money**: 600 € (300 * 2 bonus)
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: 20 points (10 * 2 bonus)
-- **Commander Score**: 20 points (10 * 2 bonus)
+- **Player Score**: 10 points (normal) / 20 points (difficult)
+- **Commander Score**: 10 points (normal) / 20 points (difficult)
 
 **Failure:**
 - **Money**: -
@@ -401,23 +359,14 @@ This guide provides detailed information about all missions available in Antista
 
 **Description:** Destroy an enemy radio tower (antenna) to disrupt their communications network. Destroyed radio towers increase the effectiveness of your hearts-and-minds operations in nearby towns.
 
-**Success (Normal Difficulty):**
+**Success:**
 - **Money**: -
 - **HR**: 0
 - **Town Support**: -
 - **Next Enemy Attack**: -
 - **Enemy Aggression**: +10 for 120 minutes
-- **Player Score**: 10 points
-- **Commander Score**: 10 points
-
-**Success (Difficult):**
-- **Money**: -
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +10 for 120 minutes
-- **Player Score**: 20 points (10 * 2 bonus)
-- **Commander Score**: 20 points (10 * 2 bonus)
+- **Player Score**: 10 points (normal) / 20 points (difficult)
+- **Commander Score**: 10 points (normal) / 20 points (difficult)
 
 **Failure:**
 - **Money**: -
@@ -437,7 +386,7 @@ This guide provides detailed information about all missions available in Antista
 **Description:** Rob an enemy-controlled bank to secure a large cash payout. This mission provides substantial financial resources but comes with significant risk. A truck must be driven near the bank to start a countdown timer.
 
 **Success:**
-- **Money**: 5000 € (normal) / 10000 € (difficult, 5000 * 2 bonus)
+- **Money**: 5000 € (normal) / 10000 € (difficult)
 - **HR**: 0
 - **Town Support**: -
 - **Next Enemy Attack**: -
@@ -460,23 +409,14 @@ This guide provides detailed information about all missions available in Antista
 
 **Description:** Retrieve supplies from a wrecked ship near a seaport. These missions provide resources without the heavy combat of other logistics operations.
 
-**Success (Normal Difficulty):**
-- **Money**: 300 €
+**Success:**
+- **Money**: 300 € (normal) / 600 € (difficult)
 - **HR**: 0
 - **Town Support**: -
 - **Next Enemy Attack**: -
 - **Enemy Aggression**: -
-- **Player Score**: 10 points
-- **Commander Score**: 5 points
-
-**Success (Difficult):**
-- **Money**: 600 € (300 * 2 bonus)
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: 20 points (10 * 2 bonus)
-- **Commander Score**: 10 points (5 * 2 bonus)
+- **Player Score**: 10 points (normal) / 20 points (difficult)
+- **Commander Score**: 5 points (normal) / 10 points (difficult)
 
 **Failure:**
 - **Money**: -
@@ -493,23 +433,14 @@ This guide provides detailed information about all missions available in Antista
 
 **Description:** Infiltrate an enemy outpost to steal or destroy an ammunition supply truck. Successfully capturing the truck provides you with valuable ammunition resources.
 
-**Success (Normal Difficulty):**
-- **Money**: 300 €
+**Success:**
+- **Money**: 300 € (normal) / 600 € (difficult)
 - **HR**: 0
 - **Town Support**: -
 - **Next Enemy Attack**: -
 - **Enemy Aggression**: -
-- **Player Score**: 10 points
-- **Commander Score**: 10 points
-
-**Success (Difficult):**
-- **Money**: 600 € (300 * 2 bonus)
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: 20 points (10 * 2 bonus)
-- **Commander Score**: 20 points (10 * 2 bonus)
+- **Player Score**: 10 points (normal) / 20 points (difficult)
+- **Commander Score**: 10 points (normal) / 20 points (difficult)
 
 **Failure:**
 - **Money**: -
@@ -552,23 +483,14 @@ This guide provides detailed information about all missions available in Antista
 
 **Description:** Evacuate civilian refugees from a dangerous area, typically a city under threat. Successfully evacuating refugees provides HR and humanitarian benefits.
 
-**Success (Normal Difficulty - Occupants):**
-- **Money**: 100 € per refugee
+**Success:**
+- **Money**: 100 € per refugee (normal) / 200 € per refugee (difficult)
 - **HR**: 1 per refugee
 - **Town Support**: -
 - **Next Enemy Attack**: -
 - **Enemy Aggression**: -10 for 60 minutes (Occupants)
-- **Player Score**: 1 point per refugee
-- **Commander Score**: 0.5 points per refugee (rounded)
-
-**Success (Difficult - Occupants):**
-- **Money**: 200 € per refugee (100 * 2 bonus)
-- **HR**: 1 per refugee
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -10 for 60 minutes (Occupants)
-- **Player Score**: 2 points per refugee (1 * 2 bonus)
-- **Commander Score**: 1 point per refugee (0.5 * 2 bonus, rounded)
+- **Player Score**: 1 point per refugee (normal) / 2 points per refugee (difficult)
+- **Commander Score**: 0.5 points per refugee (normal, rounded) / 1 point per refugee (difficult, rounded)
 
 **Failure:**
 - **Money**: -
@@ -641,23 +563,14 @@ These missions are spawned automatically by the game based on campaign events an
 
 **Description:** Deliver supplies to a friendly or neutral city to increase the population's support for your rebellion. This is a hearts-and-minds operation that helps build support in towns where you're trying to gain influence. The mission targets cities with low rebel support (below 80%).
 
-**Success (Normal Difficulty):**
+**Success:**
 - **Money**: -
 - **HR**: 0
-- **Town Support**: +15 in objective town (scaled by city size and antenna status)
+- **Town Support**: +15 (normal) / +30 (difficult) in objective town
 - **Next Enemy Attack**: -
 - **Enemy Aggression**: -10 for 60 minutes (Occupants)
-- **Player Score**: 10 points
-- **Commander Score**: 5 points
-
-**Success (Difficult):**
-- **Money**: -
-- **HR**: 0
-- **Town Support**: +30 in objective town (scaled by city size and antenna status)
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -10 for 60 minutes (Occupants)
-- **Player Score**: 20 points (10 * 2 bonus)
-- **Commander Score**: 10 points (5 * 2 bonus)
+- **Player Score**: 10 points (normal) / 20 points (difficult)
+- **Commander Score**: 5 points (normal) / 10 points (difficult)
 
 **Failure:**
 - **Money**: -
@@ -668,16 +581,3 @@ These missions are spawned automatically by the game based on campaign events an
 - **Player Score**: -
 - **Commander Score**: -10 points (normal) / -20 points (difficult)
 
----
-
-## Mission Scoring Notes
-
-- **Player Score** and **Commander Score** values represent points awarded for mission completion
-- Values shown as ranges (e.g., "10/20") indicate normal/difficult difficulty tiers
-- **Enemy Aggression** values show changes to enemy threat levels with duration (e.g., "+10 for 120 minutes" means aggression increases by 10 points for 120 minutes, then decays)
-- **Next Enemy Attack** values indicate how mission outcomes affect timing of enemy counterattacks on specific markers
-- **Town Support** changes apply to the nearest town or the mission's objective town, depending on the mission type. Values are scaled based on city population size and antenna status
-- **Difficulty** is determined by war tier: missions have a chance to be "difficult" based on `random 10 < tierWar`
-- **Bonus multipliers** for difficult missions: Most missions use a 2x multiplier, but convoy missions and Spec Ops use 1.5x
-- **Money rewards** from missions are added directly to faction resources (resourcesFIA)
-- **HR rewards** from missions are added directly to faction HR pool
