@@ -408,3 +408,12 @@ Once you've successfully captured the point:
 - **Late game fortification**: In the later stages of the game, consider placing ZU anti-air guns in every other zone. That is expensive though.
 
 - **Stay vigilant**: The enemy **WILL** attempt to take this point again, make sure you are there to keep that point.
+
+---
+
+## Additional Reference Information
+
+For detailed information about core game mechanics and systems, see the following reference guides:
+
+- [Aggression System](reference/aggression-system.md) - Detailed explanation of how the aggression system works, how it increases and decays, and how it affects enemy behavior
+- [War Tier](reference/war-tier.md) - Complete guide to war tier calculation, progression thresholds, and how it affects enemy equipment and support availability
