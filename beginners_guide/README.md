@@ -299,50 +299,46 @@ You should only attempt to capture an airbase when you meet these conditions:
 
 ## Taking a strategic point
 
+This section will help you plan and execute the capture of major strategic points like outposts, resources, factories, and seaports. These locations are heavily defended and require careful preparation, proper equipment, and coordinated execution to successfully capture and hold. Follow the guidance below to avoid costly mistakes and ensure your assault succeeds.
+
 ### What you will need
 
-Taking a strategic point in the early game is no easy challenge.
+Taking a strategic point in the early game is no easy challenge. The enemy's vehicle arsenal is big and getting bigger every day, so you will need the following on hand to take and hold a point:
 
-The enemy's vehicle arsenal is big and getting bigger every day so you will need at least this on hand to take and hold a point.
+- **AT (Anti-Tank) launchers**: Essential for eliminating armor threats. NLAWs, MAAWS and JAVELIN launchers are the best options. NLAWs and JAVELINS are especially effective because the missile will lock on to the target and should heavily damage when it hits. Armor tends to show up in the mid to late game more often than the early game, but you should have some on hand nonetheless.
 
-You will need **AT (Anti-Tank)** to eliminate armor threats. NLAWs, MAAWS and JAVELIN launchers are the best launchers. The NLAWs and JAVELINS especially so because the missile will lock on to the target and should heavily damage when it hits.
+- **Anti-air assets**: Transport helicopters like little birds and chinooks can be taken down with 50. Cal MGs, but for enemy attack helicopters and jets you will need proper AA launchers like the IGLA or STINGER missile launchers. From personal experience, the most likely attack will be 1 or more helicopters filled with infantry (in the early game), but you should be ready for anything.
 
-Armor tends to show up in the mid to late game more often than the early game, but you should have some on hand nonetheless.
+- **Large amount of infantry on standby**: Taking a point, you may be able to do alone, but you must maintain control of the zone. If you have too few defenders (2 or fewer) and enemies enter the zone, or if enemies outnumber your defenders by more than 3 to 1, the zone will flip back to the enemy. That is something you never want, which is why you will always want friendly infantry nearby to take and hold the point.
 
-You will need **anti-air** when taking a strategic point. Transport helicopters like little birds and chinooks can be taken down with 50. Cal MGs but for enemy attack helicopters and jets you will need proper AA launchers like the IGLA or STINGER missile launchers.
-
-From personal experience the most likely attack will be 1 or more helicopters filled with infantry (in the early game) but you should be ready for anything.
-
-You will also need a **large amount of infantry on standby**. Taking a point, you may be able to do alone, but you must maintain control of the zone. If you have too few defenders (2 or fewer) and enemies enter the zone, or if enemies outnumber your defenders by more than 3 to 1, the zone will flip back to the enemy.
-
-That is something you never want for reasons I'll explain later. That is why you will always want friendly infantry nearby to take and hold the point.
-
-I usually bring at least double the men the resource has. If they have 20, I bring 40. Even if my soldiers have body armour, helmets and rifles, they will not have AT launchers, LMGs, or other rare equipment and their training will definitely be inferior to the enemy. That is why I bring double at least.
+- **Garrison size recommendation**: Bring at least double the men the resource has. If they have 20, bring 40. Even if your soldiers have body armour, helmets and rifles, they will not have AT launchers, LMGs, or other rare equipment and their training will definitely be inferior to the enemy. That is why bringing double is recommended.
 
 ### Scouting your target
 
-Go to **map info** and check to see if the garrison is in a weakened state. If its status is weakened or decimated it will have a smaller garrison and easier to attack.
+Before attacking, you should:
 
-You should also scout the point you will attack and plan ahead.
+- Go to **map info** and check to see if the garrison is in a weakened state. If its status is "weakened" or "decimated" it will have a smaller garrison and be easier to attack.
 
-Find out how many of them there are and what their equipment looks like.
+- Scout the point you will attack and plan ahead.
+
+- Find out how many enemies there are and what their equipment looks like.
 
 ### Taking the point
 
-Ok, so you've scouted the target, you have double the men outside the zone ready to take the point on your command. You have both AA and AT assets ready to fight any counterattack. What now? Now you attack.
+Once you've scouted the target and have your forces ready with AA and AT assets, it's time to attack:
 
-The real objective is from the point the fight first starts to finish it as fast as possible.
+- **Speed is critical**: From the moment the fight starts, finish it as fast as possible. The longer you wait, the more likely the enemy will continually send unmarked reinforced convoys or transport helicopters to replenish the garrison.
 
-The longer you wait, the more likely the enemy will continually send unmarked reinforced convoys or transport helicopters to replenish the garrison.
+- **Flag capture mechanics**: To capture the flag, you must interact with it at the flagpole. The capture takes 7 seconds and requires that enemy forces in the zone don't outnumber your forces by more than 2 to 1. If there are too many enemies nearby, the capture will be blocked.
 
-**Important**: To capture the flag, you must interact with it at the flagpole. The capture takes 7 seconds and requires that enemy forces in the zone don't outnumber your forces by more than 2 to 1. If there are too many enemies nearby, the capture will be blocked.
-
-Once you flip the point by interacting with the flag, you **MUST hold it**. The enemy may send counterattacks depending on the location and their available resources, though these are no longer automatic. If you successfully defend the point, it's yours. However, if the enemy manages to retake the point during a counterattack and you recapture it, you may face additional attacks. That is often enough to overpower you and force a retreat.
+- **Holding the point**: Once you flip the point by interacting with the flag, you **MUST hold it**. The enemy may send counterattacks depending on the location and their available resources, though these are no longer automatic. If you successfully defend the point, it's yours. However, if the enemy manages to retake the point during a counterattack and you recapture it, you may face additional attacks. That is often enough to overpower you and force a retreat.
 
 ### After you take the point
 
-Ensure you have a large garrison to protect the point. If you have any, you should place static weapons and allow the AI to use them in case an attack comes.
+Once you've successfully captured the point:
 
-In the later stages of the game, I always have a ZU in every other zone. That is expensive though.
+- **Garrison the point**: Ensure you have a large garrison to protect the point. If you have any static weapons, place them and allow the AI to use them in case an attack comes.
 
-The enemy **WILL** attempt to take this point again, make sure you are there to keep that point.
+- **Late game fortification**: In the later stages of the game, consider placing ZU anti-air guns in every other zone. That is expensive though.
+
+- **Stay vigilant**: The enemy **WILL** attempt to take this point again, make sure you are there to keep that point.
