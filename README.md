@@ -39,6 +39,8 @@ This guide is written exclusively for Antistasi Community Edition and is largely
 
 ---
 
+[↑ Top](#official-antistasi-community-edition-wiki)
+
 # Setting up the scenario
 
 This is the **first screen you see after loading into the scenario**.
@@ -104,6 +106,8 @@ Helpful options in this tab:
 This tab is a big list of "server rules" / tuning options. This allows for fine grained control over difficulty, realism, convenience, and many other things. Leaving them as default will be a "middle of the road" experience for all the aforementioned factors.
 
 Full reference: **[Params tab reference](reference/params-tab.md)**
+
+[↑ Top](#official-antistasi-community-edition-wiki)
 
 ---
 
@@ -286,6 +290,8 @@ You lose the campaign if **more than one-third (33.33%) of the total civilian po
 - **Invader punishment attacks**: If the Invaders launch a punishment attack against one of your cities and you fail to defend it, they will destroy the city completely. This involves killing all civilians, mining the area, and marking the location as destroyed. The civilians are permanently counted towards the loss condition and the city cannot be rebuilt. Any benefits like HR or income will no longer occur from that location. You will be given a "Punishment" mission to warn you that this act is occuring, it is obviously really important you show up and defend towns targeted by punishment missions.
 - **Orbital strikes**: If an enemy orbital strike hits within 200 meters of a city, that city is immediately destroyed.
 
+[↑ Top](#official-antistasi-community-edition-wiki)
+
 ---
 
 ## Campaign Walkthrough
@@ -426,3 +432,4 @@ For detailed information about core game mechanics and systems, see the followin
 - [Builder/Fortification System](reference/builder-fortification-system.md) - Complete guide to the builder system for Team Leaders and Engineers, including how to place fortifications, construction mechanics, build times, and available structures
 - [Player Rank System](reference/player-rank-system.md) - Overview of how players earn ranks through score points, rank progression requirements, and how rank affects commander election priority
 - [AI Squad Management (Basic)](reference/ai-squad-management.md) - Guide to recruiting AI squadmates, basic command controls, dismissing units, and using direct control to take control of individual AI units for precise tactical positioning
+- [Airstrikes](reference/airstrikes.md) - Complete guide to player-controlled airstrikes including HE, Cluster, and Napalm bomb types, their effects on different targets, bomb run costs, and tactical usage
