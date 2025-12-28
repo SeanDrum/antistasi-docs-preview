@@ -198,5 +198,5 @@ As a regular player (non-commander), you **cannot**:
 - Build or modify HQ structures (commander only)
 - Skip time (commander only)
 
-For information on commander-specific functions, see the [Commander and member functionality](../reference/commander-and-member-functionality.md) guide.
+For information on commander-specific functions, see the [Commander and member functionality](commander-and-member-functionality.md) guide.
 

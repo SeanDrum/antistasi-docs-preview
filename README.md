@@ -65,7 +65,7 @@ Things you can do here:
 - **Copy a game** (new game + copy option) if you want a "branch" of an older campaign.
 - **Load old params** (when starting a new game): reuse parameter settings from a selected save.
 - **Use new namespace** (new game): used for save/import compatibility and cross-platform differences.
-- **Set HQ position** (new game): choose where HQ starts — see **[Set HQ position (HQ placement)](docs/reference/set-hq-position.md)**.
+- **Set HQ position** (new game): choose where HQ starts — see **[Set HQ position (HQ placement)](reference/set-hq-position.md)**.
 - **Export / import** (only available for compatible saves).
 - **Delete / rename** saves.
 
@@ -102,7 +102,7 @@ Helpful options in this tab:
 
 This tab is a big list of "server rules" / tuning options. This allows for fine grained control over difficulty, realism, convenience, and many other things. Leaving them as default will be a "middle of the road" experience for all the aforementioned factors.
 
-Full reference: **[Params tab reference](docs/reference/params-tab.md)**
+Full reference: **[Params tab reference](reference/params-tab.md)**
 
 ---
 
@@ -125,7 +125,7 @@ These are capturable (and losable) points around the map. Each carries different
 - **Factories**: Factories are an **income multiplier** rather than a big payout on their own. Each factory you own increases how much money your controlled **resource sites** produce (stacking per factory), so factories scale better the more of the economy you already control. Prioritize factories once you're ready to turn "some income" into "steady funding".
 - **Radio towers**: Radio towers (antennas) drive the "information war": holding them increases how often you get **intel** like enemy vehicle reveals and warnings about enemy support/strikes. They also make "hearts and minds" actions in nearby towns more effective when the tower is alive and on your side. Because the benefit applies across many fights, radio towers are often worth hitting early.
 
-Full reference:  **[Map Markers Reference](docs/reference/map-markers.md)**.
+Full reference:  **[Map Markers Reference](reference/map-markers.md)**.
 
 
 ---
@@ -153,7 +153,7 @@ When you join the campaign, you select a **player role** that grants you special
 **Tips:**
 - You can change roles at HQ via the **Player menu**
 - Teams benefit from having at least one Medic and one Engineer
-- Commanders have powerful strategic abilities—see the **[Commander functionality](docs/reference/commander-and-member-functionality.md)** guide for details
+- Commanders have powerful strategic abilities—see the **[Commander functionality](reference/commander-and-member-functionality.md)** guide for details
 
 ---
 
@@ -169,7 +169,7 @@ At HQ, you can:
 - **Restore units** (at the vehicle box): Bring back unconscious AI squadmates who were downed in combat. This lets you recover your team without having to recruit replacements.
 - **Request missions** (from Petros): If you're a member, ask for new mission assignments. Petros will offer various mission types based on current campaign needs and your war tier.
 
-Full reference: **[Your Headquarters](docs/reference/your-headquarters.md)**.
+Full reference: **[Your Headquarters](reference/your-headquarters.md)**.
 
 ---
 
@@ -203,7 +203,7 @@ Missions are tactical operations that advance your resistance campaign. They can
 **Mission outcomes:**
 Each mission has success and failure conditions with different rewards and penalties. Success typically provides money, town support boosts, and strategic advantages, while failure may reduce support, increase enemy aggression, or trigger negative events.
 
-Full reference: **[Missions Reference](docs/reference/missions.md)**.
+Full reference: **[Missions Reference](reference/missions.md)**.
 
 ---
 
@@ -232,7 +232,7 @@ The arsenal is central to progression: collect enemy equipment, build up your in
 
 This is more advanced and **not covered in this beginners guide**.
 
-- **[Commander and member functionality](docs/reference/commander-and-member-functionality.md)**
+- **[Commander and member functionality](reference/commander-and-member-functionality.md)**
 
 ---
 ### Undercover
