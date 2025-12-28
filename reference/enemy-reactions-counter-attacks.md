@@ -28,8 +28,8 @@ QRFs are rapid reinforcement units that enemies send when you attack their locat
 **When QRFs are triggered:**
 - Automatically when you attack an enemy garrison (outpost, airbase, resource site, etc.)
 - Response time depends on:
-  - **War tier**: Higher tiers = faster response (delay formula: `(0.5 + random 1) × (300 - 15 × tierWar - 1 × aggression)`)
-  - **Aggression level**: Higher aggression = faster response
+  - **War tier**: Higher tiers mean faster response times
+  - **Aggression level**: Higher aggression means faster response
   - **Distance from enemy bases**: Closer bases respond faster
   - **Air vs Land**: Air QRFs are generally faster but cost more resources
 
@@ -41,8 +41,8 @@ QRFs are rapid reinforcement units that enemies send when you attack their locat
 - QRFs check for nearby enemies within 500m of the target; if none found after 10 minutes, they return to base
 
 **Resource cost:**
-- Land QRF: `vehicleCount × A3A_balanceVehicleCost`
-- Air QRF: `1.5 × vehicleCount × A3A_balanceVehicleCost` (50% more expensive)
+- Land QRF: Cost depends on the number of vehicles sent
+- Air QRF: Costs about 50% more than land QRFs due to aircraft expenses
 - Resources are deducted from the enemy's defense pool when the QRF spawns
 
 **Defeating QRFs:**
@@ -208,15 +208,4 @@ If enemies discover your HQ location, they may launch special operations:
 8. **Prepare for punishment**: If playing against Invaders, always be ready to defend cities from punishment attacks
 9. **Protect your HQ**: Don't let enemies discover your HQ location—it triggers special operations
 10. **Time your attacks**: Use intel to time attacks when enemy resources are low
-
-## Technical Details
-
-**Code references:**
-- `fn_SUP_QRFAir.sqf` - Air QRF setup and spawning
-- `fn_SUP_QRFLand.sqf` - Land QRF setup and spawning
-- `fn_SUP_QRFRoutine.sqf` - QRF behavior and timeout logic
-- `fn_initSupports.sqf` (lines 34-57) - Support type definitions and availability
-- `fn_requestSupport.sqf` - Support call request system
-- `fn_garrisonLocal_enemyInfo.sqf` - Garrison support call logic
-- `fn_callForSupport.sqf` - Unit-level support call mechanics
 

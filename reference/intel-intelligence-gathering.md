@@ -9,7 +9,7 @@ There are four types of intel in Antistasi, each with different sources and rewa
 ### Small Intel
 **Sources:**
 - Found on dead enemy squad leaders (search their bodies)
-- Squad leaders must have the `hasIntel` variable set to true
+- Not all squad leaders carry intel—it's random whether they have it
 
 **Rewards:**
 - **Decryption Key** (60% chance): Grants a radio decryption key for the enemy faction, allowing you to intercept their communications
@@ -38,7 +38,7 @@ There are four types of intel in Antistasi, each with different sources and rewa
 2. **From interrogation**: 
    - Make an enemy squad leader surrender (they must be alive and incapacitated)
    - Use the "Interrogate" action on them
-   - Success chance is based on aggression: `120 - aggression` (higher aggression = lower success chance)
+   - Success chance decreases as enemy aggression increases—calmer enemies are more likely to talk
    - Only squad leaders can provide Medium intel through interrogation
    - Each unit can only be interrogated once
 
@@ -49,7 +49,7 @@ There are four types of intel in Antistasi, each with different sources and rewa
 
 **Rewards:**
 - **Random Weapon Unlock** (40% chance, or 30% if traitor mission is active): Permanently unlocks a random weapon from the enemy faction's arsenal
-- **Money** (60% chance, or 40% if traitor mission is active): Grants money based on war tier: `(random 50 + 10 × tierWar) × 100` (typically 1000-1500 in early game, scaling up with tier)
+- **Money** (60% chance, or 40% if traitor mission is active): Grants money based on war tier—typically 1000-1500 in early game, with higher amounts at higher war tiers
 - **Traitor Location** (30% chance, only if "Kill the Traitor" mission is active): Reveals the location of the traitor you need to eliminate
 
 **How to obtain:**
@@ -59,7 +59,7 @@ There are four types of intel in Antistasi, each with different sources and rewa
 4. The intel is immediately processed and rewards are granted
 
 **Special features:**
-- Large intel laptops may be trapped with explosives (20% + 4% per war tier chance)
+- Large intel laptops may be trapped with explosives—the chance increases as war tier increases
 - Engineers can disarm the trap before downloading
 - The trap bomb is hidden under the laptop and can be disarmed with a hold action
 
@@ -77,7 +77,7 @@ There are four types of intel in Antistasi, each with different sources and rewa
 2. Use the "Decipher Intel" action
 3. Complete the decryption minigame:
    - You need to accumulate 500-1000 points
-   - Points accumulate at 25 per second (reduced by war tier: 25 - tierWar at tier 2+, 25 - tierWar × 2 at tier 4+)
+   - Points accumulate over time, but the rate slows down at higher war tiers
    - Random "action needed" events will pause progress until you interact
    - Progress is shown as a percentage to nearby players
 
@@ -125,15 +125,4 @@ Radio towers significantly enhance your intel capabilities:
 5. **Time your decryption**: Only decrypt encrypted intel when you're prepared to handle potential counterattacks
 6. **Control radio towers**: Capture or destroy enemy radio towers to boost your intel gathering capabilities
 7. **Use decryption keys**: Radio decryption keys from Small and Medium intel let you intercept enemy communications, giving you advance warning of support calls and attacks
-
-## Technical Details
-
-**Code references:**
-- `fn_selectIntel.sqf` - Handles intel reward selection and execution
-- `fn_searchIntelOnLeader.sqf` - Small intel search mechanics
-- `fn_searchIntelOnDocument.sqf` - Medium intel document search
-- `fn_searchIntelOnLaptop.sqf` - Large intel laptop download
-- `fn_searchEncryptedIntel.sqf` - Encrypted intel decryption minigame
-- `fn_interrogate.sqf` - Interrogation mechanics for Medium intel
-- `fn_placeIntel.sqf` - Intel spawning system
 
