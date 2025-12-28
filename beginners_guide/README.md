@@ -1,6 +1,6 @@
 # Beginners Guide
 
-This is the casual "how do I actually play this?" guide.
+This guide is written exclusively for Antistasi Community Edition and is largely inspired by the original Beginner's Guide written Moni, Meerkat, Bob Murphy, Giddi, DeathTouchWilly, Targetingsnake.
 
 ## Table of Contents
 
