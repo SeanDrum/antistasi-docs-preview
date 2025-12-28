@@ -75,7 +75,12 @@ Full reference:
 
 ---
 
-## Game Mechanics
+
+
+
+
+
+# Game Mechanics
 
 Before walking through a basic strategy on how to win in Antistasi, there are some basic elements of the game that must be first understood.
 
@@ -288,4 +293,56 @@ You should only attempt to capture an airbase when you meet these conditions:
    - Cities you **don't control**: Only 50% of population × support percentage counts toward your total
    - Your "rebel-supported population" total must exceed 50% of the map's total population
 
-**Remember**: This is a marathon, not a sprint. Antistasi is designed to be a long-term campaign. Stay focused, adapt to setbacks, and keep pushing forward. Good luck, Commander!
+**Remember**: This is a marathon, not a sprint. Antistasi is designed to be a long-term campaign. Stay focused, adapt to setbacks, and keep pushing forward.
+
+---
+
+## Taking a strategic point
+
+### What you will need
+
+Taking a strategic point in the early game is no easy challenge.
+
+The enemy's vehicle arsenal is big and getting bigger every day so you will need at least this on hand to take and hold a point.
+
+You will need **AT (Anti-Tank)** to eliminate armor threats. NLAWs, MAAWS and JAVELIN launchers are the best launchers. The NLAWs and JAVELINS especially so because the missile will lock on to the target and should heavily damage when it hits.
+
+Armor tends to show up in the mid to late game more often than the early game, but you should have some on hand nonetheless.
+
+You will need **anti-air** when taking a strategic point. Transport helicopters like little birds and chinooks can be taken down with 50. Cal MGs but for enemy attack helicopters and jets you will need proper AA launchers like the IGLA or STINGER missile launchers.
+
+From personal experience the most likely attack will be 1 or more helicopters filled with infantry (in the early game) but you should be ready for anything.
+
+You will also need a **large amount of infantry on standby**. Taking a point, you may be able to do alone, but you must maintain control of the zone. If you have too few defenders (2 or fewer) and enemies enter the zone, or if enemies outnumber your defenders by more than 3 to 1, the zone will flip back to the enemy.
+
+That is something you never want for reasons I'll explain later. That is why you will always want friendly infantry nearby to take and hold the point.
+
+I usually bring at least double the men the resource has. If they have 20, I bring 40. Even if my soldiers have body armour, helmets and rifles, they will not have AT launchers, LMGs, or other rare equipment and their training will definitely be inferior to the enemy. That is why I bring double at least.
+
+### Scouting your target
+
+Go to **map info** and check to see if the garrison is in a weakened state. If its status is weakened or decimated it will have a smaller garrison and easier to attack.
+
+You should also scout the point you will attack and plan ahead.
+
+Find out how many of them there are and what their equipment looks like.
+
+### Taking the point
+
+Ok, so you've scouted the target, you have double the men outside the zone ready to take the point on your command. You have both AA and AT assets ready to fight any counterattack. What now? Now you attack.
+
+The real objective is from the point the fight first starts to finish it as fast as possible.
+
+The longer you wait, the more likely the enemy will continually send unmarked reinforced convoys or transport helicopters to replenish the garrison.
+
+**Important**: To capture the flag, you must interact with it at the flagpole. The capture takes 7 seconds and requires that enemy forces in the zone don't outnumber your forces by more than 2 to 1. If there are too many enemies nearby, the capture will be blocked.
+
+Once you flip the point by interacting with the flag, you **MUST hold it**. The enemy may send counterattacks depending on the location and their available resources, though these are no longer automatic. If you successfully defend the point, it's yours. However, if the enemy manages to retake the point during a counterattack and you recapture it, you may face additional attacks. That is often enough to overpower you and force a retreat.
+
+### After you take the point
+
+Ensure you have a large garrison to protect the point. If you have any, you should place static weapons and allow the AI to use them in case an attack comes.
+
+In the later stages of the game, I always have a ZU in every other zone. That is expensive though.
+
+The enemy **WILL** attempt to take this point again, make sure you are there to keep that point.
