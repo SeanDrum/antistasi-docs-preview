@@ -80,16 +80,17 @@ Full reference:
 
 ## Game Mechanics
 
-### Map markers (quick meaning)
+### Map markers
 
 This section is intentionally short. For Antistasi, the question is always: **“What does this marker mean for the campaign?”**
 
-- **Towns / cities**: population/support and the “hearts and minds” part of the war.
-- **Outposts**: military presence you’ll fight over a lot.
-- **Airbases**: heavy targets and late-game “big wins”.
-- **Seaports**: strategic on island/coastal maps.
-- **Factories / resources**: long-term sustainment targets.
-- **Radio towers**: high-value “information war” targets that are often worth hitting early.
+- **Towns / cities**: Towns are the “hearts and minds” layer, and they’re also **passive income**: every ~10 minutes the campaign adds **money (“resources”) and HR** based on that town’s population and rebel support. If you *control* the town you get the full value; if the enemy controls it you still get some, but reduced. High rebel support can flip the town to your side, and keeping support high makes the war easier over time.
+- **Outposts**: Outposts are military footholds and common frontline objectives. Capturing them removes an enemy garrison anchor in that area and gives you another defensible point you can garrison. Some outposts are also tied to nearby **radio towers**, which makes them extra valuable to hold.
+- **Airbases**: Airbases are “big win” strategic targets and are among the highest-value markers for victory/defeat pacing. Owning more airbases increases your available **bomb runs** over time, and denying them to the enemy reduces where they can stage attacks from. Expect tough fights and serious counterattacks, but the payoff is large.
+- **Seaports**: Seaports are strategic on coastal/island maps, and they can have a very direct economic payoff: on maps with multiple seaports, each friendly seaport can reduce **vehicle purchase prices** (up to a cap). They also shape where sea movement and sea-side attacks naturally happen, making them good staging points.
+- **Resources**: Resource sites are one of the most straightforward income markers: each one you own adds a **large flat amount of money (“resources”) every ~10 minutes** as long as the site isn’t destroyed. They’re high-priority targets because the swing is immediate and continuous (you gain it, the enemy loses it).
+- **Factories**: Factories are an **income multiplier** rather than a big payout on their own. Each factory you own increases how much money your controlled **resource sites** produce (stacking per factory), so factories scale better the more of the economy you already control. Prioritize factories once you’re ready to turn “some income” into “steady funding”.
+- **Radio towers**: Radio towers (antennas) drive the “information war”: holding them increases how often you get **intel** like enemy vehicle reveals and warnings about enemy support/strikes. They also make “hearts and minds” actions in nearby towns more effective when the tower is alive and on your side. Because the benefit applies across many fights, radio towers are often worth hitting early.
 
 ---
 
