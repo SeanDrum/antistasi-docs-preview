@@ -63,23 +63,15 @@ In exchange for this increased difficulty, difficult missions provide **higher r
 
 **How to Complete:** An enemy officer spawns at the mission location with bodyguards (1 bodyguard on normal difficulty, 5 total on difficult). The officer leads a patrol group that moves around the area. You must locate and kill the officer before the time limit expires.
 
-**Success:**
-- **Money**: 300 € (normal) / 600 € (difficult)
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: 30 minute delay (normal) / 60 minute delay (difficult)
-- **Enemy Aggression**: -
-- **Player Score**: 10 points (normal) / 20 points (difficult)
-- **Commander Score**: 10 points (normal) / 20 points (difficult)
-
-**Failure:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: 30/60 minutes sooner (normal/difficult)
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points
+| Reward Type | Success | Failure |
+|-------------|---------|---------|
+| Money | 300 € (normal) / 600 € (difficult) | - |
+| HR | 0 | - |
+| Town Support | - | - |
+| Next Enemy Attack | 30 min delay (normal) / 60 min delay (difficult) | 30/60 min sooner (normal/difficult) |
+| Enemy Aggression | - | - |
+| Player Score | 10 points (normal) / 20 points (difficult) | - |
+| Commander Score | 10 points (normal) / 20 points (difficult) | -10 points |
 
 ---
 
@@ -89,32 +81,16 @@ In exchange for this increased difficulty, difficult missions provide **higher r
 
 **How to Complete:** A traitor spawns inside a building in the target location with 2 bodyguards. After 15 seconds, a vehicle spawns nearby. The traitor will attempt to escape in the vehicle if detected. You must kill the traitor before they escape or before the time limit expires. If the traitor escapes in the vehicle, the mission fails and enemy knowledge of your HQ location increases.
 
-**Success:**
-- **Money**: 300 € (normal) / 600 € (difficult)
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +15 for 120 minutes (normal) / +30 for 120 minutes (difficult) (Occupants)
-- **Player Score**: 10 points (normal) / 20 points (difficult)
-- **Commander Score**: 5 points (normal) / 10 points (difficult)
-
-**Failed: Mission Expired:**
-- **Money**: -30% of current resources
-- **HR**: -30% of current HR
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points
-
-**Failed: Traitor Escaped:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Outcome**: Increases enemy knowledge of HQ location (may trigger Defend Petros mission)
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points
+| Reward Type | Success | Failure (Mission Expired) | Failure (Traitor Escaped) |
+|-------------|---------|---------------------------|---------------------------|
+| Money | 300 € (normal) / 600 € (difficult) | -30% of current resources | - |
+| HR | 0 | -30% of current HR | - |
+| Town Support | - | - | - |
+| Next Enemy Attack | - | - | - |
+| Enemy Aggression | +15 for 120 min (normal) / +30 for 120 min (difficult) (Occupants) | - | - |
+| Player Score | 10 points (normal) / 20 points (difficult) | - | - |
+| Commander Score | 5 points (normal) / 10 points (difficult) | -10 points | -10 points |
+| Notes | - | - | Increases enemy knowledge of HQ location (may trigger Defend Petros mission) |
 
 ---
 
@@ -124,23 +100,15 @@ In exchange for this increased difficulty, difficult missions provide **higher r
 
 **How to Complete:** Capture the target location marker (airport, city, or outpost) by flipping it to rebel control. This typically requires eliminating all enemy forces in the area and capturing the location's flag/control point. You must complete this before the time limit expires.
 
-**Success:**
-- **Money**: 200 € (normal) / 300 € (difficult)
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +10 for 60 minutes
-- **Player Score**: 10 points (normal) / 15 points (difficult)
-- **Commander Score**: 10 points (normal) / 15 points (difficult)
-
-**Failure:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points
+| Reward Type | Success | Failure |
+|-------------|---------|---------|
+| Money | 200 € (normal) / 300 € (difficult) | - |
+| HR | 0 | - |
+| Town Support | - | - |
+| Next Enemy Attack | - | - |
+| Enemy Aggression | +10 for 60 minutes | - |
+| Player Score | 10 points (normal) / 15 points (difficult) | - |
+| Commander Score | 10 points (normal) / 15 points (difficult) | -10 points |
 
 ---
 
@@ -152,23 +120,15 @@ In exchange for this increased difficulty, difficult missions provide **higher r
 
 **How to Complete:** Capture the target marker (outpost, resource site, or control point) by flipping it to rebel control. You must capture the location before the time limit expires.
 
-**Success:**
-- **Money**: 200 € (normal) / 400 € (difficult)
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: 10 points (normal) / 20 points (difficult)
-- **Commander Score**: 10 points (normal) / 20 points (difficult)
-
-**Failure:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points
+| Reward Type | Success | Failure |
+|-------------|---------|---------|
+| Money | 200 € (normal) / 400 € (difficult) | - |
+| HR | 0 | - |
+| Town Support | - | - |
+| Next Enemy Attack | - | - |
+| Enemy Aggression | - | - |
+| Player Score | 10 points (normal) / 20 points (difficult) | - |
+| Commander Score | 10 points (normal) / 20 points (difficult) | -10 points |
 
 ---
 
@@ -180,23 +140,15 @@ In exchange for this increased difficulty, difficult missions provide **higher r
 
 **How to Complete:** An enemy convoy spawns at the origin location after a delay. The convoy consists of an ammo truck escorted by military vehicles and travels along roads to the destination. You must intercept and destroy or capture the ammo truck before it reaches the destination.
 
-**Success:**
-- **Money**: 300 € (normal) / 450 € (difficult)
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +10 for 120 minutes
-- **Player Score**: 10 points (normal) / 15 points (difficult)
-- **Commander Score**: 10 points (normal) / 15 points (difficult)
-
-**Failure:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points
+| Reward Type | Success | Failure |
+|-------------|---------|---------|
+| Money | 300 € (normal) / 450 € (difficult) | - |
+| HR | 0 | - |
+| Town Support | - | - |
+| Next Enemy Attack | - | - |
+| Enemy Aggression | +10 for 120 minutes | - |
+| Player Score | 10 points (normal) / 15 points (difficult) | - |
+| Commander Score | 10 points (normal) / 15 points (difficult) | -10 points |
 
 ---
 
@@ -206,23 +158,15 @@ In exchange for this increased difficulty, difficult missions provide **higher r
 
 **How to Complete:** An enemy convoy spawns at the origin location after a delay. The convoy consists of an anti-air vehicle (AA) being transported, escorted by military vehicles. The convoy travels along roads to the destination. You must intercept and destroy or capture the AA vehicle before it reaches the destination.
 
-**Success:**
-- **Money**: -
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +10 for 120 minutes
-- **Player Score**: 10 points (normal) / 15 points (difficult)
-- **Commander Score**: 10 points (normal) / 15 points (difficult)
-
-**Failure:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points
+| Reward Type | Success | Failure |
+|-------------|---------|---------|
+| Money | - | - |
+| HR | 0 | - |
+| Town Support | - | - |
+| Next Enemy Attack | - | - |
+| Enemy Aggression | +10 for 120 minutes | - |
+| Player Score | 10 points (normal) / 15 points (difficult) | - |
+| Commander Score | 10 points (normal) / 15 points (difficult) | -10 points |
 
 ---
 
@@ -232,32 +176,15 @@ In exchange for this increased difficulty, difficult missions provide **higher r
 
 **How to Complete:** An enemy convoy spawns at the origin location after a delay. The convoy consists of a civilian supply truck (carrying money) escorted by military vehicles. The convoy travels along roads to the destination. You must intercept the money truck and drive it to your HQ (within 50 meters) before the time limit expires. If you destroy the truck instead of delivering it, you get a partial success reward.
 
-**Success - Full Completion (Reached HQ):**
-- **Money**: 5000 € (normal) / 7500 € (difficult)
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +10 for 120 minutes
-- **Player Score**: 10 points (normal) / 15 points (difficult)
-- **Commander Score**: 10 points (normal) / 15 points (difficult)
-
-**Success - Partial (Destroyed but not delivered):**
-- **Money**: -
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +5 for 60 minutes
-- **Player Score**: 5 points (normal) / 7.5 points (difficult, rounded)
-- **Commander Score**: 5 points (normal) / 7.5 points (difficult, rounded)
-
-**Failure:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points
+| Reward Type | Success (Full - Reached HQ) | Success (Partial - Destroyed) | Failure |
+|-------------|----------------------------|-------------------------------|---------|
+| Money | 5000 € (normal) / 7500 € (difficult) | - | - |
+| HR | 0 | 0 | - |
+| Town Support | - | - | - |
+| Next Enemy Attack | - | - | - |
+| Enemy Aggression | +10 for 120 minutes | +5 for 60 minutes | - |
+| Player Score | 10 points (normal) / 15 points (difficult) | 5 points (normal) / 7.5 points (difficult, rounded) | - |
+| Commander Score | 10 points (normal) / 15 points (difficult) | 5 points (normal) / 7.5 points (difficult, rounded) | -10 points |
 
 ---
 
@@ -267,32 +194,15 @@ In exchange for this increased difficulty, difficult missions provide **higher r
 
 **How to Complete:** An enemy convoy spawns at the origin location after a delay. The convoy consists of a truck carrying prisoners escorted by military vehicles. The convoy travels along roads to the destination. You must intercept the truck and capture it (by having a player in the driver seat). Once captured, prisoners will exit and you must escort them to your HQ (within 50 meters). Each prisoner that reaches HQ alive provides rewards. If all prisoners die or the convoy reaches its destination, the mission fails.
 
-**Success:**
-- **Money**: 300 € per prisoner (normal) / 450 € per prisoner (difficult)
-- **HR**: 1 per prisoner rescued
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +10 for 120 minutes
-- **Player Score**: 0.5 points per prisoner (normal) / 0.75 points per prisoner (difficult, rounded)
-- **Commander Score**: 0.5 points per prisoner (normal) / 0.75 points per prisoner (difficult, rounded)
-
-**Failure - Prisoners Killed:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +20 for 120 minutes
-- **Player Score**: -
-- **Commander Score**: -10 points
-
-**Failure - Convoy Arrived:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points
+| Reward Type | Success | Failure (Prisoners Killed) | Failure (Convoy Arrived) |
+|-------------|---------|----------------------------|--------------------------|
+| Money | 300 € per prisoner (normal) / 450 € per prisoner (difficult) | - | - |
+| HR | 1 per prisoner rescued | - | - |
+| Town Support | - | - | - |
+| Next Enemy Attack | - | - | - |
+| Enemy Aggression | +10 for 120 minutes | +20 for 120 minutes | - |
+| Player Score | 0.5 points per prisoner (normal) / 0.75 points per prisoner (difficult, rounded) | - | - |
+| Commander Score | 0.5 points per prisoner (normal) / 0.75 points per prisoner (difficult, rounded) | -10 points | -10 points |
 
 ---
 
@@ -302,23 +212,15 @@ In exchange for this increased difficulty, difficult missions provide **higher r
 
 **How to Complete:** An enemy convoy spawns at the origin location after a delay. The convoy consists of a truck carrying reinforcements escorted by military vehicles. The convoy travels along roads to the destination. You must intercept and destroy the convoy before it reaches the destination.
 
-**Success:**
-- **Money**: -
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +10 for 120 minutes
-- **Player Score**: 10 points (normal) / 15 points (difficult)
-- **Commander Score**: 10 points (normal) / 15 points (difficult)
-
-**Failure:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points
+| Reward Type | Success | Failure |
+|-------------|---------|---------|
+| Money | - | - |
+| HR | 0 | - |
+| Town Support | - | - |
+| Next Enemy Attack | - | - |
+| Enemy Aggression | +10 for 120 minutes | - |
+| Player Score | 10 points (normal) / 15 points (difficult) | - |
+| Commander Score | 10 points (normal) / 15 points (difficult) | -10 points |
 
 ---
 
@@ -330,23 +232,15 @@ In exchange for this increased difficulty, difficult missions provide **higher r
 
 **How to Complete:** An anti-air vehicle spawns at the target airbase once you get close enough (when the marker spawns). On normal difficulty, the vehicle crew will only enter and operate the vehicle if they detect players nearby. On difficult difficulty, the crew immediately enters the vehicle. You must either destroy the vehicle or steal it by having a player enter it before the time limit expires.
 
-**Success:**
-- **Money**: 300 € (normal) / 600 € (difficult)
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +5 for 60 minutes
-- **Player Score**: 10 points (normal) / 20 points (difficult)
-- **Commander Score**: 10 points (normal) / 20 points (difficult)
-
-**Failure:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points
+| Reward Type | Success | Failure |
+|-------------|---------|---------|
+| Money | 300 € (normal) / 600 € (difficult) | - |
+| HR | 0 | - |
+| Town Support | - | - |
+| Next Enemy Attack | - | - |
+| Enemy Aggression | +5 for 60 minutes | - |
+| Player Score | 10 points (normal) / 20 points (difficult) | - |
+| Commander Score | 10 points (normal) / 20 points (difficult) | -10 points |
 
 ---
 
@@ -356,24 +250,16 @@ In exchange for this increased difficulty, difficult missions provide **higher r
 
 **How to Complete:** A crashed helicopter spawns at a location near the target airbase (damaged at 80% health). The crash site is surrounded by sandbags and may have an ammo box nearby (for non-attack helicopters). Enemy forces guard the crash site. You must either destroy the crashed helicopter or repair and steal it before the time limit expires. If it's an attack helicopter and you fail, there are additional timing penalties.
 
-**Success:**
-- **Money**: 300 € (normal) / 600 € (difficult)
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: 10 points (normal) / 20 points (difficult)
-- **Commander Score**: 10 points (normal) / 20 points (difficult)
-
-**Failure:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points (normal) / -20 points (difficult)
-- **Note**: If it was an attack helicopter, additional timing penalty applies
+| Reward Type | Success | Failure |
+|-------------|---------|---------|
+| Money | 300 € (normal) / 600 € (difficult) | - |
+| HR | 0 | - |
+| Town Support | - | - |
+| Next Enemy Attack | - | - |
+| Enemy Aggression | - | - |
+| Player Score | 10 points (normal) / 20 points (difficult) | - |
+| Commander Score | 10 points (normal) / 20 points (difficult) | -10 points (normal) / -20 points (difficult) |
+| Notes | - | If attack helicopter: additional timing penalty applies |
 
 ---
 
@@ -383,23 +269,15 @@ In exchange for this increased difficulty, difficult missions provide **higher r
 
 **How to Complete:** An enemy radio tower (antenna) exists at the target location. You must destroy the antenna before the time limit expires. The antenna is destroyed when it's no longer alive or when the marker is captured by rebels.
 
-**Success:**
-- **Money**: -
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +10 for 120 minutes
-- **Player Score**: 10 points (normal) / 20 points (difficult)
-- **Commander Score**: 10 points (normal) / 20 points (difficult)
-
-**Failure:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points (normal) / -20 points (difficult)
+| Reward Type | Success | Failure |
+|-------------|---------|---------|
+| Money | - | - |
+| HR | 0 | - |
+| Town Support | - | - |
+| Next Enemy Attack | - | - |
+| Enemy Aggression | +10 for 120 minutes | - |
+| Player Score | 10 points (normal) / 20 points (difficult) | - |
+| Commander Score | 10 points (normal) / 20 points (difficult) | -10 points (normal) / -20 points (difficult) |
 
 ---
 
@@ -411,23 +289,15 @@ In exchange for this increased difficulty, difficult missions provide **higher r
 
 **How to Complete:** A civilian supply truck spawns at your HQ. Drive the truck to the bank building (within the bank's bounding box distance). Once close enough, a 120 second (normal) or 240 second (difficult) countdown begins. The truck must remain within range of the bank during the entire countdown. After the countdown completes, drive the truck back to your HQ (within 50 meters) to complete the mission and receive the money.
 
-**Success:**
-- **Money**: 5000 € (normal) / 10000 € (difficult)
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +10 for 120 minutes (Occupants)
-- **Player Score**: 10 points (normal) / 20 points (difficult)
-- **Commander Score**: 10 points (normal) / 20 points (difficult)
-
-**Failure:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points
+| Reward Type | Success | Failure |
+|-------------|---------|---------|
+| Money | 5000 € (normal) / 10000 € (difficult) | - |
+| HR | 0 | - |
+| Town Support | - | - |
+| Next Enemy Attack | - | - |
+| Enemy Aggression | +10 for 120 minutes (Occupants) | - |
+| Player Score | 10 points (normal) / 20 points (difficult) | - |
+| Commander Score | 10 points (normal) / 20 points (difficult) | -10 points |
 
 ---
 
@@ -437,23 +307,15 @@ In exchange for this increased difficulty, difficult missions provide **higher r
 
 **How to Complete:** Three salvage locations are marked in the water near the seaport. When you get close enough, a wrecked ship spawns at one of the three locations with a supply crate (equipment box) in the water. An enemy patrol boat guards the area. You must retrieve the crate (use the rope action to lift it, then transport it to your HQ). The crate can contain weapons, ammunition, or medical supplies.
 
-**Success:**
-- **Money**: 300 € (normal) / 600 € (difficult)
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: 10 points (normal) / 20 points (difficult)
-- **Commander Score**: 5 points (normal) / 10 points (difficult)
-
-**Failure:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points (normal) / -20 points (difficult)
+| Reward Type | Success | Failure |
+|-------------|---------|---------|
+| Money | 300 € (normal) / 600 € (difficult) | - |
+| HR | 0 | - |
+| Town Support | - | - |
+| Next Enemy Attack | - | - |
+| Enemy Aggression | - | - |
+| Player Score | 10 points (normal) / 20 points (difficult) | - |
+| Commander Score | 5 points (normal) / 10 points (difficult) | -10 points (normal) / -20 points (difficult) |
 
 ---
 
@@ -463,23 +325,15 @@ In exchange for this increased difficulty, difficult missions provide **higher r
 
 **How to Complete:** An ammo truck spawns at the target outpost once you get close enough. The truck is guarded by enemy patrols. You must either destroy the truck or steal it by entering it and driving it back to your HQ (within 100 meters). The truck is pre-filled with ammunition supplies.
 
-**Success:**
-- **Money**: 300 € (normal) / 600 € (difficult)
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: 10 points (normal) / 20 points (difficult)
-- **Commander Score**: 10 points (normal) / 20 points (difficult)
-
-**Failure:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points
+| Reward Type | Success | Failure |
+|-------------|---------|---------|
+| Money | 300 € (normal) / 600 € (difficult) | - |
+| HR | 0 | - |
+| Town Support | - | - |
+| Next Enemy Attack | - | - |
+| Enemy Aggression | - | - |
+| Player Score | 10 points (normal) / 20 points (difficult) | - |
+| Commander Score | 10 points (normal) / 20 points (difficult) | -10 points |
 
 ---
 
@@ -491,23 +345,15 @@ In exchange for this increased difficulty, difficult missions provide **higher r
 
 **How to Complete:** Prisoners spawn at building positions within the target location. Interact with each prisoner using the flag action to free them. Once freed, prisoners will follow you. Escort all prisoners to your HQ (within 50 meters). Each prisoner that reaches HQ alive provides rewards. If all prisoners die, the mission fails.
 
-**Success:**
-- **Money**: 100 € per prisoner (normal) / 200 € per prisoner (difficult)
-- **HR**: 2 per prisoner rescued
-- **Town Support**: +2 per prisoner in nearest city (normal) / +4 per prisoner (difficult)
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -1.5 per prisoner for 90 minutes (Occupants)
-- **Player Score**: 1 point per prisoner
-- **Commander Score**: 0.5 points per prisoner (normal) / 1 point per prisoner (difficult, rounded)
-
-**Failure:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points (normal) / -20 points (difficult)
+| Reward Type | Success | Failure |
+|-------------|---------|---------|
+| Money | 100 € per prisoner (normal) / 200 € per prisoner (difficult) | - |
+| HR | 2 per prisoner rescued | - |
+| Town Support | +2 per prisoner in nearest city (normal) / +4 per prisoner (difficult) | - |
+| Next Enemy Attack | - | - |
+| Enemy Aggression | -1.5 per prisoner for 90 minutes (Occupants) | - |
+| Player Score | 1 point per prisoner | - |
+| Commander Score | 0.5 points per prisoner (normal) / 1 point per prisoner (difficult, rounded) | -10 points (normal) / -20 points (difficult) |
 
 ---
 
@@ -517,23 +363,15 @@ In exchange for this increased difficulty, difficult missions provide **higher r
 
 **How to Complete:** Refugees spawn at building positions within the target city. Interact with each refugee using the flag action to free them. Once freed, refugees will follow you. Escort all refugees to your HQ (within 50 meters). Each refugee that reaches HQ alive provides rewards. Enemy patrols may guard the area, and for Invader-controlled cities, additional QRF reinforcements may arrive after a delay.
 
-**Success:**
-- **Money**: 100 € per refugee (normal) / 200 € per refugee (difficult)
-- **HR**: 1 per refugee
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -10 for 60 minutes (Occupants)
-- **Player Score**: 1 point per refugee (normal) / 2 points per refugee (difficult)
-- **Commander Score**: 0.5 points per refugee (normal, rounded) / 1 point per refugee (difficult, rounded)
-
-**Failure:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points (normal) / -20 points (difficult)
+| Reward Type | Success | Failure |
+|-------------|---------|---------|
+| Money | 100 € per refugee (normal) / 200 € per refugee (difficult) | - |
+| HR | 1 per refugee | - |
+| Town Support | - | - |
+| Next Enemy Attack | - | - |
+| Enemy Aggression | -10 for 60 minutes (Occupants) | - |
+| Player Score | 1 point per refugee (normal) / 2 points per refugee (difficult) | - |
+| Commander Score | 0.5 points per refugee (normal, rounded) / 1 point per refugee (difficult, rounded) | -10 points (normal) / -20 points (difficult) |
 
 ---
 
@@ -547,24 +385,16 @@ These missions are spawned automatically by the game based on campaign events an
 
 **How to Complete:** Enemy forces attack your HQ marker. You must defend the location and prevent Petros from being killed. The mission ends when either Petros dies (failure) or the attack is repelled (success). Player score is only awarded if combat occurs within 500 meters of the HQ. If you fail, you lose 90% of your money and HR, and Petros is killed.
 
-**Success:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +10 for 60 minutes (attacking side)
-- **Player Score**: 10 points (if fought within 500m of HQ)
-- **Commander Score**: -
-
-**Failure:**
-- **Money**: -90% of current resources
-- **HR**: -90% of current HR
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -
-- **Additional Penalties**: Petros is killed, HQ may need to be relocated
+| Reward Type | Success | Failure |
+|-------------|---------|---------|
+| Money | - | -90% of current resources |
+| HR | - | -90% of current HR |
+| Town Support | - | - |
+| Next Enemy Attack | - | - |
+| Enemy Aggression | +10 for 60 minutes (attacking side) | - |
+| Player Score | 10 points (if fought within 500m of HQ) | - |
+| Commander Score | - | - |
+| Notes | - | Petros is killed, HQ may need to be relocated |
 
 ---
 
@@ -574,24 +404,16 @@ These missions are spawned automatically by the game based on campaign events an
 
 **How to Complete:** A repair truck with crew spawns near a destroyed radio tower. The truck attempts to reach the tower to repair it. You must destroy the repair truck or capture the tower location (flip it to rebel control) before the time limit expires. If you fail, the tower is successfully rebuilt by the enemy.
 
-**Success:**
-- **Money**: -
-- **HR**: 0
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: +15 for 90 minutes (Occupants), +5 for 60 minutes (Invaders)
-- **Player Score**: 10 points
-- **Commander Score**: 10 points
-
-**Failure:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points
-- **Additional Penalties**: The radio tower is successfully rebuilt
+| Reward Type | Success | Failure |
+|-------------|---------|---------|
+| Money | - | - |
+| HR | 0 | - |
+| Town Support | - | - |
+| Next Enemy Attack | - | - |
+| Enemy Aggression | +15 for 90 min (Occupants), +5 for 60 min (Invaders) | - |
+| Player Score | 10 points | - |
+| Commander Score | 10 points | -10 points |
+| Notes | - | Radio tower is successfully rebuilt |
 
 ---
 
@@ -603,23 +425,15 @@ These missions are spawned automatically by the game based on campaign events an
 
 **How to Complete:** A supply crate spawns at your HQ. Load the crate into a truck (using the logistics system), then drive the truck to within 40 meters of the target city marker. Once there, the crate must be unloaded (not attached/roped to the truck). Then defend the crate with at least one friendly player within 80 meters, ensuring no enemy units are within 50 meters, for 120 seconds (normal) or 240 seconds (difficult). If enemies get too close or you move too far away, the timer resets.
 
-**Success:**
-- **Money**: -
-- **HR**: 0
-- **Town Support**: +15 (normal) / +30 (difficult) in objective town
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -10 for 60 minutes (Occupants)
-- **Player Score**: 10 points (normal) / 20 points (difficult)
-- **Commander Score**: 5 points (normal) / 10 points (difficult)
-
-**Failure:**
-- **Money**: -
-- **HR**: -
-- **Town Support**: -
-- **Next Enemy Attack**: -
-- **Enemy Aggression**: -
-- **Player Score**: -
-- **Commander Score**: -10 points (normal) / -20 points (difficult)
+| Reward Type | Success | Failure |
+|-------------|---------|---------|
+| Money | - | - |
+| HR | 0 | - |
+| Town Support | +15 (normal) / +30 (difficult) in objective town | - |
+| Next Enemy Attack | - | - |
+| Enemy Aggression | -10 for 60 minutes (Occupants) | - |
+| Player Score | 10 points (normal) / 20 points (difficult) | - |
+| Commander Score | 5 points (normal) / 10 points (difficult) | -10 points (normal) / -20 points (difficult) |
 
 ---
 
