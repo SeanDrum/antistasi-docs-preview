@@ -93,9 +93,7 @@ Helpful options in this tab:
 
 This tab is a big list of “server rules” / tuning options. This allows for fine grained control over difficulty, realism, convenience, and many other things. Leaving them as default will be a "middle of the road" experience for all the aforementioned factors.
 
-Full reference:
-
-- **[Params tab reference](../reference/params-tab.md)**
+Full reference: **[Params tab reference](../reference/params-tab.md)**
 
 ---
 
@@ -120,7 +118,7 @@ These are capturable (and losable) points around the map. Each carries different
 - **Factories**: Factories are an **income multiplier** rather than a big payout on their own. Each factory you own increases how much money your controlled **resource sites** produce (stacking per factory), so factories scale better the more of the economy you already control. Prioritize factories once you're ready to turn "some income" into "steady funding".
 - **Radio towers**: Radio towers (antennas) drive the "information war": holding them increases how often you get **intel** like enemy vehicle reveals and warnings about enemy support/strikes. They also make "hearts and minds" actions in nearby towns more effective when the tower is alive and on your side. Because the benefit applies across many fights, radio towers are often worth hitting early.
 
-For detailed information about each marker type, including exact income formulas, garrison requirements, and strategic priorities, see the **[Map Markers Reference](../reference/map-markers.md)**.
+Full reference:  **[Map Markers Reference](../reference/map-markers.md)**.
 
 
 ---
