@@ -1,7 +1,31 @@
 # Beginners Guide
 
-This is the casual “how do I actually play this?” guide.
+This is the casual "how do I actually play this?" guide.
 
+## Table of Contents
+
+- [Setting up the scenario](#setting-up-the-scenario)
+  - [Load game tab (starting, copying, loading)](#load-game-tab-starting-copying-loading)
+  - [Factions tab (who's fighting)](#factions-tab-whos-fighting)
+  - [Params tab (campaign rules)](#params-tab-campaign-rules)
+- [Game Mechanics](#game-mechanics)
+  - [Map markers](#map-markers)
+  - [Info bar](#info-bar)
+  - [Player Roles & Abilities](#player-roles--abilities)
+  - [Your Headquarters (HQ)](#your-headquarters-hq)
+  - [Arsenal](#arsenal)
+  - [Commander and member functionality (advanced)](#commander-and-member-functionality-advanced)
+  - [Undercover](#undercover)
+  - [Victory / loss conditions](#victory--loss-conditions)
+- [Campaign Walkthrough](#campaign-walkthrough)
+  - [Early Game: Building Your Arsenal](#early-game-building-your-arsenal)
+  - [Mid Game: Taking Territory](#mid-game-taking-territory)
+  - [Late Game: Total Victory](#late-game-total-victory)
+- [Taking a strategic point](#taking-a-strategic-point)
+  - [What you will need](#what-you-will-need)
+  - [Scouting your target](#scouting-your-target)
+  - [Taking the point](#taking-the-point)
+  - [After you take the point](#after-you-take-the-point)
 
 ---
 
