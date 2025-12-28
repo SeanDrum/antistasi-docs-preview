@@ -230,9 +230,9 @@ The arsenal is central to progression: collect enemy equipment, build up your in
 
 ### Commander and member functionality (advanced)
 
-This is more advanced and **not covered in this beginners guide**.
+This is a large separate part of the game and requires a lot of detail that would expand the scope of this guide too much. Thus, it is **not covered in here**.
 
-- **[Commander and member functionality](reference/commander-and-member-functionality.md)**
+Full reference:  **[Commander and member functionality](reference/commander-and-member-functionality.md)**
 
 ---
 ### Undercover
